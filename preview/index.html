@@ -225,7 +225,8 @@ if(!reduceMotion&&'IntersectionObserver'in window){
  }),{threshold:.1});
  document.querySelectorAll('.story,.metric,.source-item').forEach(el=>{el.classList.add('reveal');cardObserver.observe(el)});
 }
-\nconst bar=document.getElementById('progress');function updateProgress(){const max=document.documentElement.scrollHeight-innerHeight;bar.style.width=(max>0?scrollY/max*100:0)+'%'}addEventListener('scroll',updateProgress,{passive:true});updateProgress();
+
+const bar=document.getElementById('progress');function updateProgress(){const max=document.documentElement.scrollHeight-innerHeight;bar.style.width=(max>0?scrollY/max*100:0)+'%'}addEventListener('scroll',updateProgress,{passive:true});updateProgress();
 
 const themeToggle=document.getElementById('themeToggle');themeToggle.addEventListener('click',()=>{const dark=document.body.dataset.theme!=='dark';document.body.dataset.theme=dark?'dark':'light';themeToggle.textContent=dark?'Mode clair':'Mode sombre';themeToggle.setAttribute('aria-pressed',String(dark));document.querySelector('meta[name=theme-color]').content=dark?'#171916':'#e9e6df'});
 document.querySelectorAll('.chart-tabs button').forEach(button=>button.addEventListener('click',()=>{
