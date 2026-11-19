@@ -5,7 +5,19 @@
 <title>NBS — Lecture du matin / Direction artistique</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap');
-:root{color-scheme:light;--bg:#e9e6df;--paper:#f5f3ee;--ink:#20221f;--muted:#73756e;--line:#d5d1c8;--red:#a44c37;--green:#536c5d;--acid:#d7dc9b;--serif:'Playfair Display',Georgia,serif;--sans:'DM Sans',-apple-system,sans-serif;--mono:'DM Mono',monospace}\nbody[data-theme=dark]{color-scheme:dark;--bg:#171916;--paper:#20231f;--ink:#eeeae1;--muted:#a4a69c;--line:#3a3e37;--red:#d17b62;--green:#8ba18e;--acid:#d7dc9b}\nbody[data-theme=dark] .sources{background:#292d27}\nbody[data-theme=dark] .source-item{color:#c0c2b9}\nbody[data-theme=dark] .source-item a{border-color:#d17b6266}\nbody[data-theme=dark] .analysis-body p{color:#c0c2b9}\nbody[data-theme=dark] .analysis-body strong{color:var(--ink)}\nbody[data-theme=dark] .metric-band{background:#30362e}\nbody[data-theme=dark] .nav{background:var(--paper)}\nbody[data-theme=dark] .story{background:var(--paper)}\nbody[data-theme=dark] .hero-art{filter:brightness(.82) saturate(.88)}\nbody[data-theme=dark] .ticker{background:#8e4635}\nbody[data-theme=dark] .theme-toggle{border:1px solid var(--line);background:transparent;color:var(--ink)}
+:root{color-scheme:light;--bg:#e9e6df;--paper:#f5f3ee;--ink:#20221f;--muted:#73756e;--line:#d5d1c8;--red:#a44c37;--green:#536c5d;--acid:#d7dc9b;--serif:'Playfair Display',Georgia,serif;--sans:'DM Sans',-apple-system,sans-serif;--mono:'DM Mono',monospace}
+body[data-theme=dark]{color-scheme:dark;--bg:#171916;--paper:#20231f;--ink:#eeeae1;--muted:#a4a69c;--line:#3a3e37;--red:#d17b62;--green:#8ba18e;--acid:#d7dc9b}
+body[data-theme=dark] .sources{background:#292d27}
+body[data-theme=dark] .source-item{color:#c0c2b9}
+body[data-theme=dark] .source-item a{border-color:#d17b6266}
+body[data-theme=dark] .analysis-body p{color:#c0c2b9}
+body[data-theme=dark] .analysis-body strong{color:var(--ink)}
+body[data-theme=dark] .metric-band{background:#30362e}
+body[data-theme=dark] .nav{background:var(--paper)}
+body[data-theme=dark] .story{background:var(--paper)}
+body[data-theme=dark] .hero-art{filter:brightness(.82) saturate(.88)}
+body[data-theme=dark] .ticker{background:#8e4635}
+body[data-theme=dark] .theme-toggle{border:1px solid var(--line);background:transparent;color:var(--ink)}
 *{box-sizing:border-box}html{scroll-behavior:smooth}a,button{-webkit-tap-highlight-color:transparent}a{color:inherit;text-decoration-color:#a44c3766;text-underline-offset:4px}a:focus-visible,button:focus-visible{outline:1px solid #a44c37;outline-offset:4px;border-radius:2px}::selection{background:#ded8c9;color:#20221f}body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased}a{color:inherit}button{font:inherit;cursor:pointer;-webkit-tap-highlight-color:transparent}
 .topline{height:34px;padding:0 4.2vw;background:var(--ink);color:#e9e6df;display:flex;align-items:center;justify-content:space-between;font:9px var(--mono);letter-spacing:.12em;text-transform:uppercase}
 .topline span:last-child{color:#b8b7ad}
@@ -93,5 +105,6 @@ h1 em{font-weight:400;color:var(--red)}
 </main>
 <footer class="footer"><span>NBS® — Lecture du matin</span><span>Une lecture claire du monde qui change.</span><span>19 / 11 / 2026</span></footer>
 <script>
-const bar=document.getElementById('progress');function updateProgress(){const max=document.documentElement.scrollHeight-innerHeight;bar.style.width=(max>0?scrollY/max*100:0)+'%'}addEventListener('scroll',updateProgress,{passive:true});updateProgress();\nconst themeToggle=document.getElementById('themeToggle');themeToggle.addEventListener('click',()=>{const dark=document.body.dataset.theme!=='dark';document.body.dataset.theme=dark?'dark':'light';themeToggle.textContent=dark?'Mode clair':'Mode sombre';themeToggle.setAttribute('aria-pressed',String(dark));document.querySelector('meta[name=theme-color]').content=dark?'#171916':'#e9e6df'});
+const bar=document.getElementById('progress');function updateProgress(){const max=document.documentElement.scrollHeight-innerHeight;bar.style.width=(max>0?scrollY/max*100:0)+'%'}addEventListener('scroll',updateProgress,{passive:true});updateProgress();
+const themeToggle=document.getElementById('themeToggle');themeToggle.addEventListener('click',()=>{const dark=document.body.dataset.theme!=='dark';document.body.dataset.theme=dark?'dark':'light';themeToggle.textContent=dark?'Mode clair':'Mode sombre';themeToggle.setAttribute('aria-pressed',String(dark));document.querySelector('meta[name=theme-color]').content=dark?'#171916':'#e9e6df'});
 </script></body></html>
