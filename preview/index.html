@@ -81,6 +81,42 @@ h1 em{font-weight:400;color:var(--red)}
 }
 @media(min-width:761px) and (max-width:1050px){.hero{min-height:540px}.hero-art{min-height:540px}.story-main{grid-column:span 12;min-height:360px}.story-side{grid-column:span 6}.story-bottom{grid-column:span 6}.metric-band{grid-template-columns:1fr}.analysis{grid-template-columns:1fr 2fr}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+ 
+.interactive-lab{padding:0 4.2vw 88px;display:grid;grid-template-columns:1.1fr .9fr;gap:18px}
+.lab-panel{background:var(--paper);border:1px solid var(--line);padding:28px;min-width:0}
+.lab-head{display:flex;justify-content:space-between;align-items:start;gap:18px;margin-bottom:24px}
+.lab-kicker{font:9px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--red)}
+.lab-panel h2{font:400 clamp(25px,3vw,38px)/1.05 var(--serif);letter-spacing:-.04em;margin:10px 0 0}
+.lab-note{font:11px/1.6 var(--sans);color:var(--muted);max-width:300px;margin:9px 0 0}
+.chart-tabs{display:flex;gap:6px;flex-wrap:wrap}
+.chart-tabs button,.map-node,.story-more{border:1px solid var(--line);background:transparent;color:var(--ink);padding:9px 12px;font:9px var(--mono);letter-spacing:.06em;cursor:pointer;transition:background .2s,color .2s,border-color .2s}
+.chart-tabs button[aria-pressed=true],.map-node[aria-pressed=true]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.chart-bars{display:grid;gap:22px;margin:30px 0 18px}
+.chart-row{display:grid;grid-template-columns:120px 1fr 48px;gap:12px;align-items:center;font:10px var(--mono)}
+.chart-track{height:14px;background:var(--bg);position:relative;overflow:hidden}
+.chart-fill{height:100%;width:0;background:var(--green);transition:width 1s cubic-bezier(.2,.7,.2,1)}
+.chart-row:nth-child(2) .chart-fill{background:var(--red)}
+.chart-value{text-align:right;font-weight:500}
+.chart-caption{font:11px/1.6 var(--sans);color:var(--muted);border-top:1px solid var(--line);padding-top:15px}
+.mindmap{position:relative;min-height:255px;display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:center;padding:18px 0}
+.mindmap:before,.mindmap:after{content:"";position:absolute;left:50%;top:50%;width:36%;height:1px;background:var(--line);transform:translate(-50%,-50%) rotate(28deg);z-index:0}
+.mindmap:after{transform:translate(-50%,-50%) rotate(-28deg)}
+.map-node{position:relative;z-index:1;min-height:68px;text-align:left;padding:13px;background:var(--paper)}
+.map-node b{display:block;font:11px var(--mono);margin-bottom:5px}
+.map-node span{display:block;font:10px/1.4 var(--sans);color:var(--muted)}
+.map-node[aria-pressed=true] span{color:inherit;opacity:.78}
+.map-center{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:2;background:var(--red);color:#fff7ed;border:0;border-radius:50%;width:76px;height:76px;display:grid;place-items:center;text-align:center;font:9px/1.3 var(--mono);letter-spacing:.06em;box-shadow:0 0 0 8px var(--paper)}
+.map-detail{min-height:56px;padding:13px 15px;background:var(--bg);font:11px/1.6 var(--sans);color:var(--muted)}
+.story-more{margin-top:18px;align-self:flex-start}
+.story-extra{display:none;margin-top:14px;padding-top:14px;border-top:1px solid var(--line);font:12px/1.7 var(--sans);color:var(--muted)}
+.story-extra.is-open{display:block;animation:fadeUp .35s ease both}
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .65s ease,transform .65s cubic-bezier(.2,.7,.2,1)}
+.reveal.is-visible{opacity:1;transform:none}
+@keyframes fadeUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.chart-fill{transition:none}*{scroll-behavior:auto!important;animation:none!important}}
+body[data-theme=dark] .chart-track,body[data-theme=dark] .map-detail{background:#171916}
+body[data-theme=dark] .map-node{background:var(--paper)}
+@media(max-width:760px){.interactive-lab{padding:0 14px 58px;grid-template-columns:1fr;gap:12px}.lab-panel{padding:21px}.chart-row{grid-template-columns:95px 1fr 42px;gap:8px}.mindmap{min-height:245px}.map-center{width:66px;height:66px}.map-node{min-height:66px;padding:10px}.lab-head{display:block}.chart-tabs{margin-top:18px}}
 </style></head>
 <body>
 <div class="progress" id="progress"></div>
@@ -94,17 +130,53 @@ h1 em{font-weight:400;color:var(--red)}
 <div class="ticker"><span>LES SIGNES FAIBLES DEVIENNENT DES MARCHÉS &nbsp; ✳ &nbsp; LES SIGNES FAIBLES DEVIENNENT DES MARCHÉS &nbsp; ✳ &nbsp; LES SIGNES FAIBLES DEVIENNENT DES MARCHÉS &nbsp; ✳ &nbsp;</span></div>
 <section class="section-intro" id="signaux"><div class="section-label">01 / Les signaux du jour</div><div><h2>La valeur ne se trouve plus toujours là où se trouve le volume.</h2><p>Des plateformes de niche aux objets volontairement patinés, les signaux du jour racontent une même histoire : l'attention se disperse, mais l'appartenance à une communauté devient un avantage.</p></div></section>
 <section class="stories">
-<article class="story story-main"><div class="story-visual visual-stream"><span style="position:absolute;z-index:2;left:10%;top:10%;font:9px var(--mono);letter-spacing:.1em;color:#34473a">01 / AUDIENCE</span><span style="position:absolute;z-index:2;right:9%;bottom:9%;font:9px var(--mono);color:#34473a">NICHE ECONOMIES</span></div><div class="story-copy"><div><div class="story-kicker">01 — Médias & abonnements</div><h3>Le streaming se fragmente.</h3><p>Les services spécialisés progresseraient trois fois plus vite que les plateformes généralistes. La taille d'une audience ne dit plus tout de sa valeur.</p></div><div class="story-foot"><span>Lecture · 1 min</span><span class="arrow">↗</span></div></div></article>
+<article class="story story-main"><div class="story-visual visual-stream"><span style="position:absolute;z-index:2;left:10%;top:10%;font:9px var(--mono);letter-spacing:.1em;color:#34473a">01 / AUDIENCE</span><span style="position:absolute;z-index:2;right:9%;bottom:9%;font:9px var(--mono);color:#34473a">NICHE ECONOMIES</span></div><div class="story-copy"><div><div class="story-kicker">01 — Médias & abonnements</div><h3>Le streaming se fragmente.</h3><p>Les services spécialisés progresseraient trois fois plus vite que les plateformes généralistes. La taille d'une audience ne dit plus tout de sa valeur.</p></div><div class="story-foot"><span>Lecture · 1 min</span><span class="arrow">↗</span></div><button class="story-more" type="button" aria-expanded="false">Déplier l’analyse +</button><div class="story-extra">À retenir : la spécialisation ne suffit pas à elle seule. La rétention, la qualité de l’expérience et la relation avec la communauté déterminent la valeur réelle.</div></div></article>
 <article class="story story-side"><div class="story-visual visual-fade"><div class="shirt"></div><span style="position:absolute;top:12px;left:14px;font:9px var(--mono);color:#554a3b">02 / OBJECT CULTURE</span></div><div class="story-copy"><div><div class="story-kicker">02 — Mode & consommation</div><h3>La patine devient un produit.</h3><p>Le vêtement vieilli artificiellement transforme l'imperfection en signe de distinction et en supplément de prix.</p></div><div class="story-foot"><span>Lecture · 45 sec</span><span class="arrow">↗</span></div></div></article>
 <article class="story story-bottom"><div class="story-visual visual-game"><div class="game-ring"></div></div><div class="story-copy"><div><div class="story-kicker">03 — Économie de l'attention</div><h3>GTA VI déborde du jeu.</h3><p>Un lancement culturel peut déplacer le temps disponible, les usages sociaux et les budgets publicitaires.</p></div><div class="story-foot"><span>Lecture · 1 min</span><span class="arrow">↗</span></div></div></article>
 <article class="story story-bottom"><div class="story-visual visual-ai"><div class="ai-mark">AI</div></div><div class="story-copy"><div><div class="story-kicker">04 — Intelligence artificielle</div><h3>La production ne fait pas la confiance.</h3><p>Un acteur de l'audio génératif abandonnerait le volume automatisé pour des services B2B.</p></div><div class="story-foot"><span>Lecture · 1 min</span><span class="arrow">↗</span></div></div></article>
 </section>
 <section class="metric-band"><div class="metric-lead">La niche gagne en vitesse. <em>Le lien gagne en valeur.</em></div><div class="metrics"><div class="metric"><b>42 M</b><span>Abonnés à au moins un service spécialisé aux États-Unis</span></div><div class="metric"><b>+20 %</b><span>Croissance annuelle rapportée pour le streaming spécialisé</span></div><div class="metric"><b>+7 %</b><span>Croissance annuelle rapportée pour les services traditionnels</span></div></div></section>
-<section class="analysis" id="analyse"><div><div class="section-label">02 / Perspective NBS</div><h2>Ce qu'il faut<br>en retenir.</h2></div><div class="analysis-body"><p>Le point commun de ces signaux n'est pas technologique. Il est économique : <strong>la différenciation et la confiance deviennent des actifs</strong> quand l'offre et les contenus sont abondants.</p><p>Pour une marque ou un créateur, la piste n'est pas nécessairement de toucher plus de monde. C'est de mieux servir un public précis, de rendre l'expérience mémorable et de donner une raison de revenir.</p></div></section>
+<section class="interactive-lab" aria-label="Outils interactifs">
+<div class="lab-panel reveal">
+<div class="lab-head"><div><div class="lab-kicker">03 / Lire les données</div><h2>La croissance change d'échelle.</h2><p class="lab-note">Comparaison des taux de croissance annuelle rapportés dans l'édition. Les chiffres ne constituent pas une série historique.</p></div></div>
+<div class="chart-tabs" role="group" aria-label="Affichage du graphique"><button type="button" data-chart="growth" aria-pressed="true">Croissance</button><button type="button" data-chart="audience" aria-pressed="false">Audience</button></div>
+<div class="chart-bars" id="chartBars">
+<div class="chart-row"><span>Spécialisé</span><div class="chart-track"><div class="chart-fill" data-width="100"></div></div><span class="chart-value">+20 %</span></div>
+<div class="chart-row"><span>Traditionnel</span><div class="chart-track"><div class="chart-fill" data-width="35"></div></div><span class="chart-value">+7 %</span></div>
+</div>
+<p class="chart-caption" id="chartCaption">Les services spécialisés affichent une croissance rapportée près de trois fois supérieure aux services traditionnels.</p>
+</div>
+<div class="lab-panel reveal">
+<div class="lab-head"><div><div class="lab-kicker">04 / Cartographie des signaux</div><h2>Explorer les connexions.</h2><p class="lab-note">Sélectionne un nœud pour afficher son lien avec la tendance centrale.</p></div></div>
+<div class="mindmap" role="group" aria-label="Carte mentale interactive">
+<button class="map-node" data-map="audience" aria-pressed="true"><b>Audience</b><span>Communautés ciblées</span></button>
+<button class="map-node" data-map="culture" aria-pressed="false"><b>Culture</b><span>Objets et distinction</span></button>
+<button class="map-node" data-map="attention" aria-pressed="false"><b>Attention</b><span>Temps et arbitrages</span></button>
+<button class="map-node" data-map="confiance" aria-pressed="false"><b>Confiance</b><span>Qualité et relation</span></button>
+<div class="map-center">VALEUR<br>PERÇUE</div>
+</div>
+<div class="map-detail" id="mapDetail" aria-live="polite">Les audiences spécialisées créent de la valeur lorsqu'elles développent un lien durable avec leur communauté.</div>
+</div>
+</section>\n<section class="analysis" id="analyse"><div><div class="section-label">02 / Perspective NBS</div><h2>Ce qu'il faut<br>en retenir.</h2></div><div class="analysis-body"><p>Le point commun de ces signaux n'est pas technologique. Il est économique : <strong>la différenciation et la confiance deviennent des actifs</strong> quand l'offre et les contenus sont abondants.</p><p>Pour une marque ou un créateur, la piste n'est pas nécessairement de toucher plus de monde. C'est de mieux servir un public précis, de rendre l'expérience mémorable et de donner une raison de revenir.</p></div></section>
 <section class="sources" id="sources"><div class="sources-head"><h2>Sources & vérification</h2><span>TRANSPARENCE ÉDITORIALE</span></div><div class="source-list"><div class="source-item"><b>01 / Streaming</b>Chiffres rapportés par la newsletter. <a href="https://www.antenna.live/insights/q326-state-of-subscriptions-1-in-3-u-s-consumers-have-tried-a-specialty-svod" target="_blank" rel="noopener">Antenna ↗</a></div><div class="source-item"><b>02 / Fade farms</b>Prix cités dans l'édition. <a href="https://www.nytimes.com/2026/11/04/style/fade-farms-vintage-tees-clothing.html" target="_blank" rel="noopener">The New York Times ↗</a></div><div class="source-item"><b>03 / GTA VI</b>Prévisions et chiffres à confirmer. <a href="https://www.forbes.com/sites/maureenkerr/2026/11/15/gta-vi-release-is-a-bigger-threat-to-streaming-than-to-movie-theaters/" target="_blank" rel="noopener">Forbes ↗</a></div><div class="source-item"><b>04 / IA audio</b>Pivot rapporté par la newsletter. <a href="https://www.hollywoodreporter.com/business/digital/the-5000-episodes-a-week-ai-podcast-company-pivot-1236754759/" target="_blank" rel="noopener">The Hollywood Reporter ↗</a></div></div></section>
 </main>
 <footer class="footer"><span>NBS® — Lecture du matin</span><span>Une lecture claire du monde qui change.</span><span>19 / 11 / 2026</span></footer>
 <script>
 const bar=document.getElementById('progress');function updateProgress(){const max=document.documentElement.scrollHeight-innerHeight;bar.style.width=(max>0?scrollY/max*100:0)+'%'}addEventListener('scroll',updateProgress,{passive:true});updateProgress();
+
 const themeToggle=document.getElementById('themeToggle');themeToggle.addEventListener('click',()=>{const dark=document.body.dataset.theme!=='dark';document.body.dataset.theme=dark?'dark':'light';themeToggle.textContent=dark?'Mode clair':'Mode sombre';themeToggle.setAttribute('aria-pressed',String(dark));document.querySelector('meta[name=theme-color]').content=dark?'#171916':'#e9e6df'});
+document.querySelectorAll('.chart-tabs button').forEach(button=>button.addEventListener('click',()=>{
+ document.querySelectorAll('.chart-tabs button').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
+ const audience=button.dataset.chart==='audience';
+ const rows=document.querySelectorAll('#chartBars .chart-row');
+ if(audience){rows[0].querySelector('span').textContent='Abonnés US';rows[0].querySelector('.chart-fill').style.width='100%';rows[0].querySelector('.chart-value').textContent='42 M';rows[1].style.display='none';document.getElementById('chartCaption').textContent='42 millions de personnes aux États-Unis sont abonnées à au moins un service spécialisé, selon le chiffre rapporté.'}
+ else{rows[0].querySelector('span').textContent='Spécialisé';rows[0].querySelector('.chart-fill').style.width='100%';rows[0].querySelector('.chart-value').textContent='+20 %';rows[1].style.display='grid';rows[1].querySelector('span').textContent='Traditionnel';rows[1].querySelector('.chart-fill').style.width='35%';rows[1].querySelector('.chart-value').textContent='+7 %';document.getElementById('chartCaption').textContent='Les services spécialisés affichent une croissance rapportée près de trois fois supérieure aux services traditionnels.'}
+}));
+const mapCopy={audience:'Les audiences spécialisées créent de la valeur lorsqu’elles développent un lien durable avec leur communauté.',culture:'Les objets et codes culturels deviennent des marqueurs d’appartenance et de distinction.',attention:'Quand les contenus se multiplient, le temps disponible devient une ressource rare et disputée.',confiance:'La confiance, la qualité et la relation différencient une offre dans un marché saturé.'};
+document.querySelectorAll('.map-node').forEach(button=>button.addEventListener('click',()=>{document.querySelectorAll('.map-node').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));document.getElementById('mapDetail').textContent=mapCopy[button.dataset.map]}));
+document.querySelectorAll('.story-more').forEach(button=>button.addEventListener('click',()=>{const panel=button.nextElementSibling;const open=panel.classList.toggle('is-open');button.setAttribute('aria-expanded',String(open));button.textContent=open?'Refermer −':'Déplier l’analyse +'}));
+const revealObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('is-visible');revealObserver.unobserve(entry.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>revealObserver.observe(el));
+document.querySelectorAll('.chart-fill').forEach(el=>requestAnimationFrame(()=>el.style.width=el.dataset.width+'%'));
+
 </script></body></html>
