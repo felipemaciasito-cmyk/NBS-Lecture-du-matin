@@ -117,6 +117,43 @@ h1 em{font-weight:400;color:var(--red)}
 body[data-theme=dark] .chart-track,body[data-theme=dark] .map-detail{background:#171916}
 body[data-theme=dark] .map-node{background:var(--paper)}
 @media(max-width:760px){.interactive-lab{padding:0 14px 58px;grid-template-columns:1fr;gap:12px}.lab-panel{padding:21px}.chart-row{grid-template-columns:95px 1fr 42px;gap:8px}.mindmap{min-height:245px}.map-center{width:66px;height:66px}.map-node{min-height:66px;padding:10px}.lab-head{display:block}.chart-tabs{margin-top:18px}}
+
+/* Navigation motion layer */
+@keyframes orbitDrift{from{transform:translate(-50%,-50%) rotate(0deg)}to{transform:translate(-50%,-50%) rotate(360deg)}}
+@keyframes orbitCounter{from{transform:rotate(34deg)}to{transform:rotate(394deg)}}
+@keyframes discFloat{0%,100%{translate:0 0}50%{translate:0 -13px}}
+@keyframes crossPulse{0%,100%{opacity:.35;scale:.75}50%{opacity:1;scale:1.2}}
+@keyframes tickerTravel{from{transform:translateX(0)}to{transform:translateX(-35%)}}
+@keyframes softGlow{0%,100%{box-shadow:0 0 0 0 #a44c3720}50%{box-shadow:0 0 0 13px #a44c3700}}
+.hero-art .orbit{animation:orbitDrift 65s linear infinite}
+.hero-art .orbit:before{animation:orbitCounter 42s linear infinite}
+.hero-art .disc{animation:discFloat 7s ease-in-out infinite}
+.hero-art .cross{animation:crossPulse 3.8s ease-in-out infinite}
+.hero-art .art-index{animation:softGlow 6s ease-in-out infinite}
+.ticker span{will-change:transform;animation:tickerTravel 24s linear infinite}
+.story{transition:transform .55s cubic-bezier(.2,.7,.2,1),box-shadow .55s,border-color .35s}
+.story:hover{transform:translateY(-7px);box-shadow:0 18px 36px #22221b12;border-color:var(--red)}
+.story-visual:after{transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.story:hover .visual-stream:after{transform:scale(1.08) rotate(8deg)}
+.story:hover .shirt{transform:scale(1.045) rotate(-2deg)}
+.shirt{transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.arrow{transition:transform .35s,background .35s,color .35s}
+.story:hover .arrow{transform:rotate(45deg);background:var(--red);color:#fff;border-color:var(--red)}
+.navlinks a{position:relative;transition:color .25s}
+.navlinks a:after{content:"";position:absolute;left:0;right:100%;bottom:-7px;height:1px;background:var(--red);transition:right .3s}
+.navlinks a:hover:after,.navlinks a.is-current:after{right:0}
+.section-intro,.metric-band,.analysis,.sources{scroll-margin-top:22px}
+.lab-panel{transition:transform .5s cubic-bezier(.2,.7,.2,1),box-shadow .5s}
+.lab-panel:hover{transform:translateY(-4px);box-shadow:0 15px 35px #22221b0d}
+.map-center{animation:softGlow 5s ease-in-out infinite}
+.map-node{transition:transform .25s,background .25s,color .25s}
+.map-node:hover{transform:translateY(-3px)}
+.chart-fill{position:relative}
+.chart-fill:after{content:"";position:absolute;inset:0;background:linear-gradient(105deg,transparent 20%,#ffffff55 50%,transparent 80%);transform:translateX(-110%);animation:chartSheen 3.8s ease-in-out infinite}
+@keyframes chartSheen{0%,35%{transform:translateX(-110%)}70%,100%{transform:translateX(110%)}}
+.progress{box-shadow:0 0 8px #a44c3777}
+@media(hover:none){.story:hover,.lab-panel:hover{transform:none;box-shadow:none}.story:active{transform:scale(.99)}}
+@media(prefers-reduced-motion:reduce){.hero-art .orbit,.hero-art .orbit:before,.hero-art .disc,.hero-art .cross,.hero-art .art-index,.ticker span,.map-center,.chart-fill:after{animation:none!important}.story,.lab-panel,.story-visual:after,.shirt,.arrow,.navlinks a:after,.map-node{transition:none!important}}
 </style></head>
 <body>
 <div class="progress" id="progress"></div>
@@ -163,7 +200,32 @@ body[data-theme=dark] .map-node{background:var(--paper)}
 </main>
 <footer class="footer"><span>NBS® — Lecture du matin</span><span>Une lecture claire du monde qui change.</span><span>19 / 11 / 2026</span></footer>
 <script>
-const bar=document.getElementById('progress');function updateProgress(){const max=document.documentElement.scrollHeight-innerHeight;bar.style.width=(max>0?scrollY/max*100:0)+'%'}addEventListener('scroll',updateProgress,{passive:true});updateProgress();
+
+/* Scroll-linked motion: gentle depth, active section and reveal */
+const reduceMotion=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const heroArt=document.querySelector('.hero-art');
+let scrollTick=false;
+function onScrollMotion(){
+ if(scrollTick)return;scrollTick=true;
+ requestAnimationFrame(()=>{
+  const y=window.scrollY||0;
+  if(heroArt&&!reduceMotion&&y<innerHeight*1.4){heroArt.style.setProperty('--parallax-y',(y*.12)+'px');heroArt.style.transform='translate3d(0,'+(y*.045)+'px,0)'}
+  const sections=[...document.querySelectorAll('#edition,#signaux,#analyse,#sources')];
+  let current='';
+  sections.forEach(section=>{if(section.getBoundingClientRect().top<innerHeight*.42)current=section.id});
+  document.querySelectorAll('.navlinks a').forEach(a=>a.classList.toggle('is-current',a.getAttribute('href')==='#'+current));
+  scrollTick=false;
+ });
+}
+addEventListener('scroll',onScrollMotion,{passive:true});onScrollMotion();
+/* Staggered entrance for editorial cards */
+if(!reduceMotion&&'IntersectionObserver'in window){
+ const cardObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{
+  if(entry.isIntersecting){const card=entry.target;const siblings=[...card.parentElement.children];card.style.transitionDelay=(Math.min(siblings.indexOf(card),5)*85)+'ms';card.classList.add('is-visible');cardObserver.unobserve(card)}
+ }),{threshold:.1});
+ document.querySelectorAll('.story,.metric,.source-item').forEach(el=>{el.classList.add('reveal');cardObserver.observe(el)});
+}
+\nconst bar=document.getElementById('progress');function updateProgress(){const max=document.documentElement.scrollHeight-innerHeight;bar.style.width=(max>0?scrollY/max*100:0)+'%'}addEventListener('scroll',updateProgress,{passive:true});updateProgress();
 
 const themeToggle=document.getElementById('themeToggle');themeToggle.addEventListener('click',()=>{const dark=document.body.dataset.theme!=='dark';document.body.dataset.theme=dark?'dark':'light';themeToggle.textContent=dark?'Mode clair':'Mode sombre';themeToggle.setAttribute('aria-pressed',String(dark));document.querySelector('meta[name=theme-color]').content=dark?'#171916':'#e9e6df'});
 document.querySelectorAll('.chart-tabs button').forEach(button=>button.addEventListener('click',()=>{
