@@ -1,95 +1,254 @@
 <!doctype html>
-<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#101b1a"><meta name="description" content="NBS — Lecture du matin, 18 NOVEMBRE 2026. Briefing éditorial synthétique."><title>NBS — 18 NOVEMBRE 2026 | Lecture du matin</title>
+<html lang="fr"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#e9e6df"><meta name="description" content="NBS — Lecture du matin. Briefing éditorial du mercredi 18 novembre 2026.">
+<title>NBS — Lecture du matin / 18 novembre 2026</title>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
-:root{--ink:#17211f;--muted:#68736e;--paper:#f4f2eb;--white:#fffefa;--line:#d9ded5;--green:#244b43;--acid:#c7e36b;--orange:#c46a49;--serif:'Playfair Display',Georgia,serif;--sans:'DM Sans',-apple-system,sans-serif;--mono:'DM Mono',monospace}
-*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.72 var(--sans);-webkit-font-smoothing:antialiased}
-.progress{position:fixed;z-index:20;inset:0 0 auto;height:3px;background:transparent}.progress span{display:block;height:100%;width:0;background:var(--acid)}
-.topbar{position:sticky;top:0;z-index:15;background:rgba(244,242,235,.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
-.topinner{max-width:1180px;margin:auto;padding:15px 30px;display:flex;align-items:center;justify-content:space-between}.brand{font:500 12px var(--mono);letter-spacing:.16em;text-transform:uppercase}.brand b{color:var(--orange);font-weight:500}.toplinks{display:flex;gap:22px}.toplinks a{font-size:12px;color:var(--muted);text-decoration:none}
-.hero{background:var(--green);color:#f5f3e9;position:relative;overflow:hidden}.hero:after{content:"NBS";position:absolute;right:-.04em;bottom:-.48em;font:700 clamp(180px,34vw,440px)/1 var(--serif);color:rgba(255,255,255,.045);pointer-events:none}
-.hero-inner{max-width:1180px;margin:auto;padding:76px 30px 72px;position:relative;z-index:1;display:grid;grid-template-columns:1.2fr .8fr;gap:50px;align-items:end}.eyebrow,.story-kicker,.mini-label{font:11px var(--mono);letter-spacing:.16em;text-transform:uppercase}.eyebrow{color:var(--acid)}.hero h1{font:500 clamp(44px,7vw,86px)/.99 var(--serif);letter-spacing:-.045em;max-width:780px;margin:22px 0 24px}.hero-meta{font:11px var(--mono);letter-spacing:.12em;color:rgba(245,243,233,.68);text-transform:uppercase}.hero-side{border-left:1px solid rgba(255,255,255,.24);padding:5px 0 5px 28px;max-width:380px}.hero-side .mini-label{color:var(--acid);margin-bottom:14px}.hero-side p{font:16px/1.65 var(--sans);color:rgba(245,243,233,.88);margin:0}
-.layout{max-width:1180px;margin:0 auto;padding:58px 30px 100px;display:grid;grid-template-columns:245px minmax(0,740px);gap:70px;align-items:start}.rail{position:sticky;top:86px}.rail-title{font:10px var(--mono);letter-spacing:.16em;color:var(--muted);text-transform:uppercase;margin:0 0 18px}.rail nav{display:grid;gap:4px}.rail nav a{display:grid;grid-template-columns:27px 1fr;gap:8px;padding:9px 8px;text-decoration:none;color:#68736e;font-size:12px;line-height:1.35;border-left:1px solid var(--line);transition:.2s}.rail nav a span{font:10px var(--mono);color:#9aa29b}.rail nav a:hover,.rail nav a.active{color:var(--ink);border-left:2px solid var(--orange);padding-left:7px}.rail nav a.active span{color:var(--orange}
-).rail-tools{display:flex;gap:8px;margin-top:28px;flex-wrap:wrap}.tool{border:1px solid var(--line);background:transparent;border-radius:99px;padding:8px 12px;font:11px var(--mono);color:var(--muted);cursor:pointer}.tool:hover{border-color:var(--green);color:var(--green)}
-.reading{min-width:0}.lead{padding:0 0 36px;margin-bottom:12px;border-bottom:1px solid var(--line)}.lead .mini-label{color:var(--orange);margin-bottom:14px}.lead p{font:22px/1.55 var(--serif);margin:0;letter-spacing:-.01em}.doc-title{display:none}
-.story{padding:38px 0 40px;border-bottom:1px solid var(--line);scroll-margin-top:100px}.story-kicker{color:var(--orange);margin-bottom:10px}.story h2{font:500 clamp(30px,4vw,43px)/1.12 var(--serif);letter-spacing:-.025em;margin:0 0 22px;max-width:680px}.story h3{font:700 14px var(--sans);letter-spacing:.01em;margin:28px 0 8px}.story p{margin:0 0 15px}.story ul,.story ol{padding-left:20px;margin:9px 0 22px}.story li{padding-left:5px;margin:8px 0}.story li::marker{color:var(--orange)}.story strong{font-weight:700;color:#263e37}.story a{color:#9a4f36;text-decoration-color:#d9a28e;text-underline-offset:3px}.story blockquote{margin:22px 0;padding:18px 22px;background:#e9eee4;border-left:3px solid var(--green);font:18px/1.55 var(--serif)}
-.story:last-child{border:0}.story:has(h2:first-of-type){} 
-.story h2{position:relative}.story h2:after{content:"";display:block;width:42px;height:2px;background:var(--acid);margin-top:17px}
-.story:has(h2) .story-kicker{display:block}
-.story#section-5,.story#section-6{background:var(--white);padding:28px 30px;margin:30px -30px;border:1px solid var(--line);border-radius:3px}
-footer{background:#17211f;color:#d8ddd4;padding:35px 30px}.footinner{max-width:1180px;margin:auto;display:flex;justify-content:space-between;gap:30px;align-items:center}.footbrand{font:11px var(--mono);letter-spacing:.16em}.footnote{font-size:11px;color:#aab5ac;text-align:right}.footinner a{color:var(--acid);text-decoration:none}
-body.focus .rail{display:none}body.focus .layout{display:block;max-width:820px}body.focus .hero-inner{max-width:820px;grid-template-columns:1fr}body.focus .hero-side{max-width:720px}
-@media(max-width:800px){.topinner{padding:13px 19px}.hero-inner{padding:55px 21px 45px;grid-template-columns:1fr;gap:27px}.hero h1{font-size:clamp(44px,12vw,68px)}.hero-side{border-left:0;border-top:1px solid rgba(255,255,255,.24);padding:20px 0 0;max-width:620px}.layout{display:block;padding:34px 21px 65px}.rail{position:relative;top:auto;margin-bottom:34px}.rail nav{display:flex;overflow:auto;padding-bottom:8px}.rail nav a{min-width:170px}.rail-tools{margin-top:14px}.lead p{font-size:20px}.story{padding:30px 0}.story h2{font-size:34px}.story#section-5,.story#section-6{margin:22px -12px;padding:24px 18px}.footinner{display:block}.footnote{text-align:left;margin-top:12px}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
-</style></head><body>
-<div class="progress"><span id="progress"></span></div>
-<header class="topbar"><div class="topinner"><div class="brand">NBS <b>/</b> LECTURE DU MATIN</div><div class="toplinks"><a href="../index.html">ARCHIVE</a><a href="https://www.the-nbs.fr/" target="_blank" rel="noopener">SOURCE ↗</a></div></div></header>
-<section class="hero"><div class="hero-inner"><div><div class="eyebrow">THE NEXT BIG SH*T · MERCREDI · 18 NOVEMBRE 2026</div><h1>La liquidité se contracte. Les communautés prennent de la valeur.</h1><div class="hero-meta">BRIEFING ÉDITORIAL &nbsp;·&nbsp; 4 MIN DE LECTURE</div></div><div class="hero-side"><div class="mini-label">EN UNE MINUTE</div><p>Trois signaux dominent cette édition : la contraction des stablecoins pourrait annoncer une baisse de liquidité sur les marchés crypto ; les plateformes de divertissement cherchent à transformer des communautés de niche en abonnements et événements physiques ; enfin, la Gen Z banalise la conversation autour de l’argent et fait émerger de nouveaux formats de services financiers et communautaires.</p></div></div></section>
-<div class="layout"><aside class="rail"><p class="rail-title">Dans cette édition</p><nav><a href="#section-1"><span>01</span>1. Les stablecoins perdent 12 Md$ en un mois</a><a href="#section-2"><span>02</span>2. La Gen Z transforme le budget en activité sociale</a><a href="#section-3"><span>03</span>3. Netflix veut convertir un succès de streaming en tournée mondiale</a><a href="#section-4"><span>04</span>4. La nostalgie des années 1990 et le retour du tangible</a><a href="#section-5"><span>05</span>5. Le pouvoir de dire non : un enjeu de gouvernance</a><a href="#section-6"><span>06</span>À surveiller — signaux secondaires</a><a href="#section-7"><span>07</span>Idées concrètes à retenir</a><a href="#section-8"><span>08</span>Méthode et fiabilité</a></nav><div class="rail-tools"><button class="tool" id="focus">Mode lecture</button><button class="tool" onclick="window.print()">Imprimer / PDF</button></div></aside><main class="reading"><h1 class="doc-title">NBS — Mercredi 18 novembre 2026</h1>
-<p>&lt;small&gt;Lecture estimée : 4 min · Édition quotidienne&lt;/small&gt;</p></section>
-<section class="story" id="section-0"><div class="story-kicker">PARTIE 00</div><h2>En une minute</h2>
-<p>Trois signaux dominent cette édition : la contraction des stablecoins pourrait annoncer une baisse de liquidité sur les marchés crypto ; les plateformes de divertissement cherchent à transformer des communautés de niche en abonnements et événements physiques ; enfin, la Gen Z banalise la conversation autour de l’argent et fait émerger de nouveaux formats de services financiers et communautaires.</p></section>
-<section class="story" id="section-1"><div class="story-kicker">PARTIE 01</div><h2>1. Les stablecoins perdent 12 Md$ en un mois</h2>
-<p><strong>Pourquoi c’est important.</strong> Les stablecoins servent souvent de réserve de liquidité dans l’écosystème crypto. Leur contraction simultanée à une baisse du Bitcoin peut signaler un retrait de capitaux, et pas seulement une baisse des cours.</p>
-<p><strong>Chiffres rapportés par la newsletter</strong></p>
-<ul>
-<li>Environ <strong>12 Md$</strong> de capitalisation stablecoin en moins sur 30 jours — contraction décrite comme la plus rapide depuis Terra-Luna en 2022.</li>
-<li>Les réserves d’USDT et d’USDC sur les plateformes auraient reculé de <strong>26,7 Md$ depuis avril</strong>.</li>
-<li>Le Bitcoin aurait perdu <strong>plus de 20 % en un mois</strong>.</li>
-</ul>
-<p><strong>Lecture / implication.</strong> À surveiller : les flux de stablecoins, les réserves sur les plateformes et les rendements obligataires. La newsletter avance deux explications possibles — obligations plus rémunératrices et réallocation vers des introductions en Bourse — sans établir leur poids respectif.</p>
-<p><strong>À retenir.</strong> Une baisse de prix et une baisse de liquidité sont deux phénomènes distincts ; leur combinaison mérite une attention particulière.</p>
-<p>Sources : <a href="https://www.bloomberg.com/news/articles/2026-11-16/stablecoin-market-shrinks-most-since-terra-luna-s-2022-crash" target="_blank" rel="noopener noreferrer">Bloomberg — contraction du marché des stablecoins <span aria-hidden="true">↗</span></a></p></section>
-<section class="story" id="section-2"><div class="story-kicker">PARTIE 02</div><h2>2. La Gen Z transforme le budget en activité sociale</h2>
-<p><strong>Le signal.</strong> Parler d’argent entre amis devient plus acceptable : le « loud budgeting » consiste à assumer publiquement qu’un achat n’entre pas dans son budget. Les « money parties » prolongent le mouvement en réunissant des proches pour parler dépenses, impôts ou investissement.</p>
-<p><strong>Chiffres cités</strong></p>
-<ul>
-<li><strong>47 %</strong> des jeunes interrogés vivraient d’un salaire à l’autre ; <strong>55 %</strong> auraient retardé un projet de vie pour des raisons financières.</li>
-<li><strong>60 %</strong> des jeunes Américains discuteraient d’argent avec leurs amis.</li>
-<li><strong>42 %</strong> de la Gen Z pratiqueraient le loud budgeting ; les adeptes économiseraient en moyenne <strong>629 $ par mois</strong>.</li>
-<li>Les recherches Google pour « money parties » auraient doublé depuis 2022.</li>
-</ul>
-<p><strong>Opportunité.</strong> Il existe un espace pour des produits et contenus financiers moins intimidants : outils de budget partagés, ateliers entre amis, newsletters pédagogiques et communautés d’entraide. Le ton et la confiance semblent aussi importants que la fonctionnalité.</p>
-<p>Sources : <a href="https://newsroom.bankofamerica.com/content/newsroom/press-releases/2026/05/bofa-study-finds-fewer-gen-z-rely-on-family-for-financial-assist" target="_blank" rel="noopener noreferrer">Bank of America — étude Gen Z <span aria-hidden="true">↗</span></a> · <a href="https://www.theguardian.com/business/2026/aug/10/gen-z-loud-budgeting-small-business-owners" target="_blank" rel="noopener noreferrer">The Guardian — loud budgeting <span aria-hidden="true">↗</span></a> · <a href="https://www.marketwatch.com/story/forget-happy-hour-money-parties-are-having-a-moment-6bc6f02a" target="_blank" rel="noopener noreferrer">MarketWatch — money parties <span aria-hidden="true">↗</span></a></p></section>
-<section class="story" id="section-3"><div class="story-kicker">PARTIE 03</div><h2>3. Netflix veut convertir un succès de streaming en tournée mondiale</h2>
-<p>Le film <em>KPop Demon Hunters</em> aurait dépassé <strong>670 millions de vues cumulées</strong>. Son groupe fictif HUNTR/X est au centre d’un projet de tournée produit avec AEG : <strong>61 dates dans 35 villes</strong> en Amérique du Nord et en Europe en 2027, avec une extension prévue en Asie et en Amérique latine en 2028, pour viser <strong>150 spectacles dans 50 villes</strong>.</p>
-<p><strong>Lecture.</strong> Netflix teste la valeur d’une propriété intellectuelle au-delà de l’écran : musique, spectacle vivant, produits dérivés et expériences physiques. La communauté de fans devient un public potentiel pour des événements payants.</p>
-<p><strong>Application.</strong> Pour une marque média ou un créateur, le contenu peut être le point de départ d’un univers exploitable sur plusieurs formats — à condition d’avoir une communauté réellement engagée.</p>
-<p>Source : <a href="https://about.netflix.com/fr/news/aeg-presents-netflix-kpop-demon-hunters-golden-world-tour" target="_blank" rel="noopener noreferrer">Netflix / AEG — annonce de la tournée <span aria-hidden="true">↗</span></a></p></section>
-<section class="story" id="section-4"><div class="story-kicker">PARTIE 04</div><h2>4. La nostalgie des années 1990 et le retour du tangible</h2>
-<p>Les micro-franges (« microbangs »), le denim, les accessoires et les silhouettes inspirées des années 1990 seraient de retour. La newsletter relie cette tendance à une nostalgie plus large : près de <strong>40 % de la Gen Z</strong> et plus de <strong>60 % des millennials</strong> seraient nostalgiques des années 1990.</p>
-<p><strong>Lecture.</strong> L’hypothèse proposée est que la saturation numérique renforce l’attrait pour les objets, les activités manuelles et les rencontres physiques. C’est une piste culturelle, pas une causalité démontrée dans cette édition.</p>
-<p><strong>Opportunité.</strong> Les marques peuvent travailler la matérialité, l’expérience en présence, l’artisanat et les références analogiques plutôt que de simplement reprendre des codes visuels rétro.</p>
-<p>Source : <a href="https://trends.google.com/trends/explore?date=today+5-y&amp;q=microbangs" target="_blank" rel="noopener noreferrer">Google Trends — microbangs <span aria-hidden="true">↗</span></a></p></section>
-<section class="story" id="section-5"><div class="story-kicker">PARTIE 05</div><h2>5. Le pouvoir de dire non : un enjeu de gouvernance</h2>
-<p>La newsletter s’appuie sur une étude de 2011 pour avancer que les dirigeants fortement flattés peuvent surestimer leur jugement et moins corriger leur stratégie lorsque les résultats se dégradent. Elle souligne aussi les obstacles à la contradiction : dépendance hiérarchique, concentration des droits de vote et lobbying.</p>
-<p><strong>Chiffres cités</strong></p>
-<ul>
-<li>Mark Zuckerberg contrôlerait environ <strong>61 % des droits de vote</strong> de Meta avec moins de 15 % du capital.</li>
-<li>Elon Musk disposerait de plus de <strong>80 % des voix de SpaceX</strong>.</li>
-<li>Nvidia aurait dépensé environ <strong>6 M$ en lobbying fédéral en 2025</strong>.</li>
-</ul>
-<p><strong>Implication.</strong> Dans une organisation, la qualité de la décision dépend aussi de la capacité des équipes à contredire le dirigeant. L’IA pourrait accentuer ce sujet si des entreprises très puissantes restent contrôlées par un cercle restreint.</p>
-<p>Source : <a href="https://www.kellogg.northwestern.edu/news_articles/2012/ceo-warning-press.aspx" target="_blank" rel="noopener noreferrer">Kellogg School — étude sur les dirigeants et la flatterie <span aria-hidden="true">↗</span></a></p></section>
-<section class="story" id="section-6"><div class="story-kicker">PARTIE 06</div><h2>À surveiller — signaux secondaires</h2>
-<ul>
-<li><strong>OVHcloud</strong> présente « Olala », son premier modèle d’IA pour les entreprises, annoncé comme téléchargeable et modifiable sur Hugging Face. L’éditeur affirme qu’il pourrait fonctionner sans carte graphique dédiée. <a href="https://www.challenges.fr/entreprise/tech-numerique/ovhcloud-prend-le-train-de-lia-le-fleuron-francais-de-linformatique-a-distance-devoile-son-premier-modele-olala_647013" target="_blank" rel="noopener noreferrer">Article de Challenges <span aria-hidden="true">↗</span></a></li>
-<li>Les nouvelles inscriptions d’étudiants internationaux aux États-Unis auraient baissé de <strong>18 %</strong> en 2025-2026. <a href="https://opendoorsdata.org/annual-release/international-students/" target="_blank" rel="noopener noreferrer">Open Doors <span aria-hidden="true">↗</span></a></li>
-<li>La newsletter affirme que Muse dépasse <strong>10 millions d’utilisateurs actifs quotidiens</strong> ; chiffre repris tel quel, sans vérification indépendante dans cette fiche.</li>
-</ul></section>
-<section class="story" id="section-7"><div class="story-kicker">PARTIE 07</div><h2>Idées concrètes à retenir</h2>
-<ol>
-<li><strong>Création / médias :</strong> tester un format de contenu qui peut vivre en ligne puis se prolonger en événement réel.</li>
-<li><strong>Services :</strong> explorer des formats de budget collaboratif, pédagogiques et non culpabilisants.</li>
-<li><strong>Culture / commerce :</strong> observer la demande pour les objets tangibles, les pièces vintage et les expériences analogiques.</li>
-<li><strong>Investissement :</strong> suivre les flux de stablecoins avant d’interpréter les mouvements de prix crypto.</li>
-</ol></section>
-<section class="story" id="section-8"><div class="story-kicker">PARTIE 08</div><h2>Méthode et fiabilité</h2>
-<p>Cette fiche synthétise l’édition reçue par e-mail le 18/11/2026. Les chiffres et affirmations sont attribués à la newsletter et à ses liens sources ; ils ne sont pas tous vérifiés indépendamment ici. Les interprétations et opportunités sont signalées comme telles. Le contenu sponsorisé (Ramify, Immo Insolite) n’est pas traité comme une recommandation.</p>
-<p><a href="https://www.the-nbs.fr/" target="_blank" rel="noopener noreferrer">Site de The Next Big Sh*t <span aria-hidden="true">↗</span></a></p></section></main></div>
-<footer><div class="footinner"><div class="footbrand">NBS / LECTURE DU MATIN</div><div class="footnote">Archive éditoriale · 18 NOVEMBRE 2026<br>Les chiffres sont attribués à l’édition et à ses sources ; les interprétations sont signalées séparément.<br><a href="../index.html">Retour à l’archive ↗</a></div></div></footer>
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap');
+:root{color-scheme:light;--bg:#e9e6df;--paper:#f5f3ee;--ink:#20221f;--muted:#73756e;--line:#d5d1c8;--red:#a44c37;--green:#536c5d;--acid:#d7dc9b;--serif:'Playfair Display',Georgia,serif;--sans:'DM Sans',-apple-system,sans-serif;--mono:'DM Mono',monospace}
+body[data-theme=dark]{color-scheme:dark;--bg:#171916;--paper:#20231f;--ink:#eeeae1;--muted:#a4a69c;--line:#3a3e37;--red:#d17b62;--green:#8ba18e;--acid:#d7dc9b}
+body[data-theme=dark] .sources{background:#292d27}
+body[data-theme=dark] .source-item{color:#c0c2b9}
+body[data-theme=dark] .source-item a{border-color:#d17b6266}
+body[data-theme=dark] .analysis-body p{color:#c0c2b9}
+body[data-theme=dark] .analysis-body strong{color:var(--ink)}
+body[data-theme=dark] .metric-band{background:#30362e}
+body[data-theme=dark] .nav{background:var(--paper)}
+body[data-theme=dark] .story{background:var(--paper)}
+body[data-theme=dark] .hero-art{filter:brightness(.82) saturate(.88)}
+body[data-theme=dark] .ticker{background:#8e4635}
+body[data-theme=dark] .theme-toggle{border:1px solid var(--line);background:transparent;color:var(--ink)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}a,button{-webkit-tap-highlight-color:transparent}a{color:inherit;text-decoration-color:#a44c3766;text-underline-offset:4px}a:focus-visible,button:focus-visible{outline:1px solid #a44c37;outline-offset:4px;border-radius:2px}::selection{background:#ded8c9;color:#20221f}body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased}a{color:inherit}button{font:inherit;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.topline{height:34px;padding:0 4.2vw;background:var(--ink);color:#e9e6df;display:flex;align-items:center;justify-content:space-between;font:9px var(--mono);letter-spacing:.12em;text-transform:uppercase}
+.topline span:last-child{color:#b8b7ad}
+.nav{height:76px;padding:0 4.2vw;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);background:var(--paper);position:relative;z-index:5}
+.brand{font:500 17px var(--mono);letter-spacing:-.08em}.brand i{font-style:normal;color:var(--red)}
+.navlinks{display:flex;gap:28px;align-items:center;font:10px var(--mono);letter-spacing:.08em;text-transform:uppercase}.navlinks a{text-decoration:none;color:var(--muted)}.navlinks a:hover{color:var(--red)}
+.edition{font:9px var(--mono);color:var(--muted);letter-spacing:.08em}.theme-toggle{border:1px solid var(--line);background:transparent;color:var(--ink);padding:9px 12px;font:9px var(--mono);letter-spacing:.08em;text-transform:uppercase;border-radius:2px;white-space:nowrap}.theme-toggle:hover{border-color:var(--red);color:var(--red)}
+.hero{min-height:610px;background:var(--paper);display:grid;grid-template-columns:1.06fr .94fr;position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+.hero-copy{padding:clamp(54px,8vw,112px) 4.2vw 58px;position:relative;z-index:2;display:flex;flex-direction:column;justify-content:space-between}
+.eyebrow{display:flex;align-items:center;gap:12px;font:9px var(--mono);letter-spacing:.15em;text-transform:uppercase;color:var(--red)}.eyebrow:before{content:"";width:28px;height:1px;background:var(--red)}
+h1{font:400 clamp(58px,8.1vw,116px)/.91 var(--serif);letter-spacing:-.065em;margin:50px 0 26px;max-width:740px}
+h1 em{font-weight:400;color:var(--red)}
+.dek{max-width:390px;font:15px/1.7 var(--sans);color:var(--muted);margin:0}
+.hero-bottom{display:flex;align-items:end;justify-content:space-between;margin-top:50px;gap:20px}
+.meta{display:flex;gap:18px;flex-wrap:wrap;font:9px var(--mono);letter-spacing:.08em;color:var(--muted);text-transform:uppercase}
+.scroll-cue{font:9px var(--mono);letter-spacing:.1em;color:var(--red);white-space:nowrap}
+.hero-art{position:relative;min-height:610px;background:#d8d8c8;overflow:hidden;isolation:isolate}
+.art-grain{position:absolute;inset:0;opacity:.18;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.35'/%3E%3C/svg%3E");mix-blend-mode:multiply;z-index:4;pointer-events:none}
+.orbit{position:absolute;width:min(66vw,680px);aspect-ratio:1;border:1px solid rgba(32,34,31,.35);border-radius:50%;left:50%;top:50%;transform:translate(-50%,-50%);z-index:1}
+.orbit:before,.orbit:after{content:"";position:absolute;border:1px solid rgba(32,34,31,.24);border-radius:50%;inset:10% -7%;transform:rotate(34deg)}.orbit:after{inset:23% -14%;transform:rotate(-38deg)}
+.disc{position:absolute;width:54%;aspect-ratio:1;border-radius:50%;left:50%;top:50%;transform:translate(-50%,-50%);background:radial-gradient(circle at 33% 28%,#f2e9cf 0 3%,#d1a78a 14%,#a44c37 42%,#612d29 70%,#252522 100%);box-shadow:inset -35px -40px 70px #24231f66,30px 45px 80px #27251f33;z-index:2}
+.disc:before{content:"";position:absolute;inset:15%;border:1px solid #f4dfc488;border-radius:50%;transform:rotate(28deg) scaleX(.68)}
+.disc:after{content:"";position:absolute;inset:29% -12%;border:1px solid #f4dfc477;border-radius:50%;transform:rotate(-42deg)}
+.art-label{position:absolute;z-index:3;font:9px var(--mono);letter-spacing:.13em;text-transform:uppercase}.art-label.one{top:11%;left:10%}.art-label.two{bottom:11%;right:9%;text-align:right}.art-index{position:absolute;right:9%;top:10%;font:clamp(58px,10vw,130px)/1 var(--serif);color:#252822;opacity:.78;letter-spacing:-.08em}
+.hero-art .cross{position:absolute;width:22px;height:22px;left:16%;bottom:18%;z-index:3}.cross:before,.cross:after{content:"";position:absolute;background:#a44c37}.cross:before{height:1px;width:22px;top:10px}.cross:after{width:1px;height:22px;left:10px}
+.ticker{background:var(--red);color:#f5f0e8;overflow:hidden;white-space:nowrap;padding:12px 0;font:9px var(--mono);letter-spacing:.14em;text-transform:uppercase}.ticker span{display:inline-block;padding-left:25px}
+.section-intro{padding:82px 4.2vw 36px;display:grid;grid-template-columns:1fr 2fr;gap:35px;align-items:start}.section-label{font:9px var(--mono);letter-spacing:.15em;text-transform:uppercase;color:var(--red);padding-top:10px}.section-intro h2{font:400 clamp(32px,4.8vw,64px)/1.02 var(--serif);letter-spacing:-.045em;margin:0;max-width:780px}.section-intro p{font:13px/1.7 var(--sans);color:var(--muted);max-width:430px;margin:18px 0 0}
+.stories{padding:20px 4.2vw 90px;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:18px}
+.story{background:var(--paper);border:1px solid var(--line);min-width:0;position:relative;overflow:hidden}
+.story-main{grid-column:span 7;display:grid;grid-template-columns:1fr .88fr;min-height:430px}
+.story-side{grid-column:span 5;display:flex;flex-direction:column;min-height:430px}
+.story-bottom{grid-column:span 4;min-height:340px}
+.story-visual{position:relative;overflow:hidden;background:#d9d7cd;min-height:230px;display:flex;align-items:center;justify-content:center}
+.story-main .story-visual{min-height:100%}
+.visual-stream{background:#d9d8c9}.visual-stream:before{content:"";position:absolute;width:70%;aspect-ratio:1;border:1px solid #52695a;border-radius:50%;box-shadow:0 0 0 25px #52695a12,0 0 0 50px #52695a10,0 0 0 75px #52695a0c}
+.visual-stream:after{content:"";position:absolute;width:44%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 35% 30%,#f3eddd,#8a9b7d 48%,#394c40 80%);box-shadow:20px 24px 40px #394c4033}
+.visual-fade{background:#d2c6b4}.shirt{width:54%;height:66%;background:linear-gradient(135deg,#e8ddc7,#a18d72 55%,#706451);clip-path:polygon(25% 0,42% 8%,58% 8%,75% 0,100% 19%,83% 40%,73% 32%,73% 100%,27% 100%,27% 32%,17% 40%,0 19%);filter:drop-shadow(15px 20px 16px #453b2d44);position:relative}.shirt:after{content:"";position:absolute;inset:8%;background:repeating-linear-gradient(110deg,transparent 0 8px,#655a4933 9px 10px);mix-blend-mode:multiply}
+.visual-game{background:#222722;color:#d9dc9b}.game-ring{width:62%;aspect-ratio:1;border:1px solid #d9dc9b;border-radius:50%;position:relative;box-shadow:0 0 0 25px #d9dc9b0c,0 0 0 50px #d9dc9b08}.game-ring:before{content:"VI";position:absolute;inset:0;display:grid;place-items:center;font:clamp(60px,8vw,110px) var(--serif);letter-spacing:-.08em}.game-ring:after{content:"ATTENTION IS THE NEW TERRITORY";position:absolute;bottom:-38px;left:50%;transform:translateX(-50%);white-space:nowrap;font:8px var(--mono);letter-spacing:.12em}
+.visual-ai{background:#d8d9d0}.ai-mark{font:clamp(42px,6vw,78px) var(--serif);letter-spacing:-.08em;color:#536c5d;position:relative}.ai-mark:before,.ai-mark:after{content:"";position:absolute;left:50%;top:50%;width:150%;height:1px;background:#536c5d66;transform:translate(-50%,-50%) rotate(45deg)}.ai-mark:after{transform:translate(-50%,-50%) rotate(-45deg)}
+.story-copy{padding:28px;display:flex;flex-direction:column;justify-content:space-between;min-width:0}.story-kicker{font:9px var(--mono);letter-spacing:.13em;color:var(--red);text-transform:uppercase}.story h3{font:400 clamp(25px,3vw,38px)/1.05 var(--serif);letter-spacing:-.035em;margin:17px 0 12px}.story p{font:12px/1.7 var(--sans);color:var(--muted);margin:0}.story-foot{margin-top:24px;display:flex;justify-content:space-between;align-items:center;gap:10px;font:9px var(--mono);color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
+.arrow{width:30px;height:30px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;color:var(--red);font-size:15px}
+.story-side .story-visual{height:48%;min-height:190px}.story-side .story-copy{flex:1}
+.story-bottom .story-visual{height:190px;min-height:190px}.story-bottom .story-copy{padding:23px}.story-bottom h3{font-size:27px}
+.metric-band{margin:0 4.2vw 90px;background:#252923;color:#f3f0e7;padding:45px 4.2vw;display:grid;grid-template-columns:1fr 2fr;gap:35px;align-items:center}
+.metric-lead{font:400 clamp(24px,3.2vw,42px)/1.1 var(--serif);max-width:300px}.metric-lead em{color:var(--acid);font-style:normal}
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.metric{border-left:1px solid #ffffff3a;padding-left:20px}.metric b{font:400 clamp(32px,4.5vw,58px)/1 var(--serif);color:var(--acid);letter-spacing:-.05em}.metric span{display:block;margin-top:11px;font:9px/1.5 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:#b8b9ad}
+.analysis{padding:0 4.2vw 90px;display:grid;grid-template-columns:1fr 2fr;gap:35px}.analysis h2{font:400 42px/1 var(--serif);letter-spacing:-.04em;margin:0}.analysis-body{border-top:1px solid var(--ink);padding-top:20px;display:grid;grid-template-columns:1fr 1fr;gap:30px}.analysis-body p{font:14px/1.8 var(--sans);margin:0;color:#55584f}.analysis-body strong{color:var(--ink)}
+.sources{background:#dedbd3;padding:55px 4.2vw 60px}.sources-head{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid #c4c0b7;padding-bottom:18px}.sources h2{font:400 34px var(--serif);margin:0}.sources-head span{font:9px var(--mono);letter-spacing:.12em;color:var(--muted)}.source-list{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;padding-top:24px}.source-item{font:11px/1.5 var(--sans);color:#62645d}.source-item b{display:block;font:9px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--red);margin-bottom:8px}.source-item a{text-decoration:none;border-bottom:1px solid #a44c3766;padding-bottom:2px}
+.footer{background:var(--ink);color:#e9e6df;padding:30px 4.2vw;display:flex;justify-content:space-between;align-items:center;font:9px var(--mono);letter-spacing:.12em;text-transform:uppercase}.footer span:last-child{color:#aaa99f}
+.progress{position:fixed;left:0;top:0;height:2px;width:0;background:var(--red);z-index:20}
+@media(max-width:760px){
+.topline{padding:0 18px;font-size:8px}.nav{height:62px;padding:0 20px}.navlinks{display:none}.edition{font-size:8px}
+.hero{display:flex;flex-direction:column;min-height:0}.hero-copy{padding:43px 22px 30px;min-height:410px}h1{font-size:clamp(55px,15vw,76px);margin:46px 0 22px;max-width:560px}.dek{font-size:14px}.hero-bottom{margin-top:36px;align-items:start;flex-direction:column}.meta{gap:9px 14px;font-size:8px}.scroll-cue{display:none}
+.hero-art{min-height:360px}.orbit{width:88vw}.disc{width:55%}.art-index{font-size:76px}.art-label{font-size:8px}
+.ticker{font-size:8px}.section-intro{padding:58px 22px 20px;display:block}.section-label{margin-bottom:22px}.section-intro h2{font-size:43px}.section-intro p{font-size:13px;margin-top:14px}
+.stories{padding:14px 14px 58px;display:flex;flex-direction:column;gap:12px}.story-main{display:flex;flex-direction:column;min-height:0}.story-main .story-visual{min-height:240px}.story-side{min-height:0}.story-side .story-visual{height:220px;min-height:220px}.story-bottom{min-height:0}.story-bottom .story-visual{height:190px;min-height:190px}.story-copy{padding:22px}.story h3{font-size:30px}.story p{font-size:13px}.story-bottom h3{font-size:28px}
+.metric-band{margin:0 14px 60px;padding:30px 22px;display:block}.metric-lead{font-size:30px;max-width:100%;margin-bottom:28px}.metrics{gap:8px}.metric{padding-left:10px}.metric b{font-size:31px}.metric span{font-size:8px}
+.analysis{padding:0 22px 60px;display:block}.analysis h2{font-size:37px;margin-bottom:25px}.analysis-body{grid-template-columns:1fr;gap:16px}.analysis-body p{font-size:13px}
+.sources{padding:38px 22px 45px}.sources h2{font-size:29px}.sources-head span{font-size:8px}.source-list{grid-template-columns:1fr 1fr;gap:20px 14px}.source-item{font-size:11px}
+.footer{padding:22px;display:block;line-height:2}.footer span{display:block}
+}
+@media(min-width:761px) and (max-width:1050px){.hero{min-height:540px}.hero-art{min-height:540px}.story-main{grid-column:span 12;min-height:360px}.story-side{grid-column:span 6}.story-bottom{grid-column:span 6}.metric-band{grid-template-columns:1fr}.analysis{grid-template-columns:1fr 2fr}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+ 
+.interactive-lab{padding:0 4.2vw 88px;display:grid;grid-template-columns:1.1fr .9fr;gap:18px}
+.lab-panel{background:var(--paper);border:1px solid var(--line);padding:28px;min-width:0}
+.lab-head{display:flex;justify-content:space-between;align-items:start;gap:18px;margin-bottom:24px}
+.lab-kicker{font:9px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--red)}
+.lab-panel h2{font:400 clamp(25px,3vw,38px)/1.05 var(--serif);letter-spacing:-.04em;margin:10px 0 0}
+.lab-note{font:11px/1.6 var(--sans);color:var(--muted);max-width:300px;margin:9px 0 0}
+.chart-tabs{display:flex;gap:6px;flex-wrap:wrap}
+.chart-tabs button,.map-node,.story-more{border:1px solid var(--line);background:transparent;color:var(--ink);padding:9px 12px;font:9px var(--mono);letter-spacing:.06em;cursor:pointer;transition:background .2s,color .2s,border-color .2s}
+.chart-tabs button[aria-pressed=true],.map-node[aria-pressed=true]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.chart-bars{display:grid;gap:22px;margin:30px 0 18px}
+.chart-row{display:grid;grid-template-columns:120px 1fr 48px;gap:12px;align-items:center;font:10px var(--mono)}
+.chart-track{height:14px;background:var(--bg);position:relative;overflow:hidden}
+.chart-fill{height:100%;width:0;background:var(--green);transition:width 1s cubic-bezier(.2,.7,.2,1)}
+.chart-row:nth-child(2) .chart-fill{background:var(--red)}
+.chart-value{text-align:right;font-weight:500}
+.chart-caption{font:11px/1.6 var(--sans);color:var(--muted);border-top:1px solid var(--line);padding-top:15px}
+.mindmap{position:relative;min-height:255px;display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:center;padding:18px 0}
+.mindmap:before,.mindmap:after{content:"";position:absolute;left:50%;top:50%;width:36%;height:1px;background:var(--line);transform:translate(-50%,-50%) rotate(28deg);z-index:0}
+.mindmap:after{transform:translate(-50%,-50%) rotate(-28deg)}
+.map-node{position:relative;z-index:1;min-height:68px;text-align:left;padding:13px;background:var(--paper)}
+.map-node b{display:block;font:11px var(--mono);margin-bottom:5px}
+.map-node span{display:block;font:10px/1.4 var(--sans);color:var(--muted)}
+.map-node[aria-pressed=true] span{color:inherit;opacity:.78}
+.map-center{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:2;background:var(--red);color:#fff7ed;border:0;border-radius:50%;width:76px;height:76px;display:grid;place-items:center;text-align:center;font:9px/1.3 var(--mono);letter-spacing:.06em;box-shadow:0 0 0 8px var(--paper)}
+.map-detail{min-height:56px;padding:13px 15px;background:var(--bg);font:11px/1.6 var(--sans);color:var(--muted)}
+.story-more{margin-top:18px;align-self:flex-start}
+.story-extra{display:none;margin-top:14px;padding-top:14px;border-top:1px solid var(--line);font:12px/1.7 var(--sans);color:var(--muted)}
+.story-extra.is-open{display:block;animation:fadeUp .35s ease both}
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .65s ease,transform .65s cubic-bezier(.2,.7,.2,1)}
+.reveal.is-visible{opacity:1;transform:none}
+@keyframes fadeUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.chart-fill{transition:none}*{scroll-behavior:auto!important;animation:none!important}}
+body[data-theme=dark] .chart-track,body[data-theme=dark] .map-detail{background:#171916}
+body[data-theme=dark] .map-node{background:var(--paper)}
+@media(max-width:760px){.interactive-lab{padding:0 14px 58px;grid-template-columns:1fr;gap:12px}.lab-panel{padding:21px}.chart-row{grid-template-columns:95px 1fr 42px;gap:8px}.mindmap{min-height:245px}.map-center{width:66px;height:66px}.map-node{min-height:66px;padding:10px}.lab-head{display:block}.chart-tabs{margin-top:18px}}
+
+/* Navigation motion layer */
+@keyframes orbitDrift{from{transform:translate(-50%,-50%) rotate(0deg)}to{transform:translate(-50%,-50%) rotate(360deg)}}
+@keyframes orbitCounter{from{transform:rotate(34deg)}to{transform:rotate(394deg)}}
+@keyframes discFloat{0%,100%{translate:0 0}50%{translate:0 -13px}}
+@keyframes crossPulse{0%,100%{opacity:.35;scale:.75}50%{opacity:1;scale:1.2}}
+@keyframes tickerTravel{from{transform:translateX(0)}to{transform:translateX(-35%)}}
+@keyframes softGlow{0%,100%{box-shadow:0 0 0 0 #a44c3720}50%{box-shadow:0 0 0 13px #a44c3700}}
+.hero-art .orbit{animation:orbitDrift 65s linear infinite}
+.hero-art .orbit:before{animation:orbitCounter 42s linear infinite}
+.hero-art .disc{animation:discFloat 7s ease-in-out infinite}
+.hero-art .cross{animation:crossPulse 3.8s ease-in-out infinite}
+.hero-art .art-index{animation:softGlow 6s ease-in-out infinite}
+.ticker span{will-change:transform;animation:tickerTravel 24s linear infinite}
+.story{transition:transform .55s cubic-bezier(.2,.7,.2,1),box-shadow .55s,border-color .35s}
+.story:hover{transform:translateY(-7px);box-shadow:0 18px 36px #22221b12;border-color:var(--red)}
+.story-visual:after{transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.story:hover .visual-stream:after{transform:scale(1.08) rotate(8deg)}
+.story:hover .shirt{transform:scale(1.045) rotate(-2deg)}
+.shirt{transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.arrow{transition:transform .35s,background .35s,color .35s}
+.story:hover .arrow{transform:rotate(45deg);background:var(--red);color:#fff;border-color:var(--red)}
+.navlinks a{position:relative;transition:color .25s}
+.navlinks a:after{content:"";position:absolute;left:0;right:100%;bottom:-7px;height:1px;background:var(--red);transition:right .3s}
+.navlinks a:hover:after,.navlinks a.is-current:after{right:0}
+.section-intro,.metric-band,.analysis,.sources{scroll-margin-top:22px}
+.lab-panel{transition:transform .5s cubic-bezier(.2,.7,.2,1),box-shadow .5s}
+.lab-panel:hover{transform:translateY(-4px);box-shadow:0 15px 35px #22221b0d}
+.map-center{animation:softGlow 5s ease-in-out infinite}
+.map-node{transition:transform .25s,background .25s,color .25s}
+.map-node:hover{transform:translateY(-3px)}
+.chart-fill{position:relative}
+.chart-fill:after{content:"";position:absolute;inset:0;background:linear-gradient(105deg,transparent 20%,#ffffff55 50%,transparent 80%);transform:translateX(-110%);animation:chartSheen 3.8s ease-in-out infinite}
+@keyframes chartSheen{0%,35%{transform:translateX(-110%)}70%,100%{transform:translateX(110%)}}
+.progress{box-shadow:0 0 8px #a44c3777}
+@media(hover:none){.story:hover,.lab-panel:hover{transform:none;box-shadow:none}.story:active{transform:scale(.99)}}
+@media(prefers-reduced-motion:reduce){.hero-art .orbit,.hero-art .orbit:before,.hero-art .disc,.hero-art .cross,.hero-art .art-index,.ticker span,.map-center,.chart-fill:after{animation:none!important}.story,.lab-panel,.story-visual:after,.shirt,.arrow,.navlinks a:after,.map-node{transition:none!important}}
+</style></head>
+<body>
+<div class="progress" id="progress"></div>
+<div class="topline"><span>Une veille indépendante, chaque matin</span><span>Paris · 18.11.2026</span></div>
+<header class="nav"><a class="brand" href="#" style="text-decoration:none">NBS<i>®</i></a><nav class="navlinks"><a href="#edition">L'édition</a><a href="#signaux">Les signaux</a><a href="#analyse">Perspective</a><a href="#sources">Sources</a></nav><div style="display:flex;align-items:center;gap:18px"><span class="edition">VOL. 01 &nbsp; / &nbsp; 2026</span><button class="theme-toggle" id="themeToggle" type="button" aria-pressed="false">Mode sombre</button></div></header>
+<main id="edition">
+<section class="hero">
+<div class="hero-copy"><div><div class="eyebrow">Mercredi 18 novembre 2026 &nbsp; / &nbsp; Édition 01</div><h1>La liquidité<br>se contracte.<br><em>La confiance</em><br>devient un actif.</h1><p class="dek">Marchés crypto, nouvelles pratiques financières et communautés culturelles : cinq signaux pour comprendre les déplacements de liquidité, de confiance et de valeur.</p></div><div class="hero-bottom"><div class="meta"><span>5 min de lecture</span><span>Business</span><span>Culture</span><span>Technologie</span></div><span class="scroll-cue">DÉFILER POUR EXPLORER ↓</span></div></div>
+<div class="hero-art" aria-label="Composition abstraite représentant des marchés et des audiences en orbite"><div class="art-index">02</div><div class="art-label one">Signal / Culture<br>Market shifts</div><div class="orbit"></div><div class="disc"></div><div class="cross"></div><div class="art-label two">NBS Intelligence<br>Daily fieldnotes</div><div class="art-grain"></div></div>
+</section>
+<div class="ticker"><span>LES SIGNES FAIBLES DEVIENNENT DES MARCHÉS &nbsp; ✳ &nbsp; LES SIGNES FAIBLES DEVIENNENT DES MARCHÉS &nbsp; ✳ &nbsp; LES SIGNES FAIBLES DEVIENNENT DES MARCHÉS &nbsp; ✳ &nbsp;</span></div>
+<section class="section-intro" id="signaux"><div class="section-label">01 / Les signaux du jour</div><div><h2>La valeur ne se trouve plus toujours là où se trouve le volume.</h2><p>Des plateformes de niche aux objets volontairement patinés, les signaux du jour racontent une même histoire : l'attention se disperse, mais l'appartenance à une communauté devient un avantage.</p></div></section>
+<section class="stories">
+<article class="story story-main"><div class="story-visual visual-stream"><span style="position:absolute;z-index:2;left:10%;top:10%;font:9px var(--mono);letter-spacing:.1em;color:#34473a">01 / LIQUIDITÉ</span><span style="position:absolute;z-index:2;right:9%;bottom:9%;font:9px var(--mono);color:#34473a">CRYPTO MARKETS</span></div><div class="story-copy"><div><div class="story-kicker">01 — Marchés & crypto</div><h3>Les stablecoins perdent 12 Md$ en un mois.</h3><p>La contraction des stablecoins, combinée au recul du Bitcoin, pourrait signaler un retrait de liquidité au-delà de la seule baisse des cours.</p></div><div class="story-foot"><span>Lecture · 1 min</span><span class="arrow">↗</span></div><button class="story-more" type="button" aria-expanded="false">Déplier l’analyse +</button><div class="story-extra">À surveiller : les flux de stablecoins, les réserves détenues sur les plateformes et les rendements obligataires. La newsletter avance plusieurs explications possibles sans établir leur poids respectif. Une baisse de prix et une baisse de liquidité restent deux phénomènes distincts.</div></div></article>
+<article class="story story-side"><div class="story-visual visual-fade"><div class="shirt"></div><span style="position:absolute;top:12px;left:14px;font:9px var(--mono);color:#554a3b">02 / GEN Z</span></div><div class="story-copy"><div><div class="story-kicker">02 — Argent & société</div><h3>Le budget devient une activité sociale.</h3><p>Le loud budgeting et les « money parties » rendent les conversations financières plus visibles entre amis.</p></div><div class="story-foot"><span>Lecture · 1 min</span><span class="arrow">↗</span></div><button class="story-more" type="button" aria-expanded="false">Déplier l’analyse +</button><div class="story-extra">Des outils de budget partagés, des ateliers entre amis et des contenus pédagogiques pourraient répondre à une demande de services financiers moins intimidants. Le ton et la confiance comptent autant que la fonctionnalité.</div></div></article>
+<article class="story story-bottom"><div class="story-visual visual-game"><div class="game-ring"></div></div><div class="story-copy"><div><div class="story-kicker">03 — Divertissement</div><h3>Netflix veut sortir ses fans de l’écran.</h3><p>Le succès de KPop Demon Hunters serait prolongé par une tournée mondiale autour du groupe fictif HUNTR/X.</p></div><div class="story-foot"><span>Lecture · 1 min</span><span class="arrow">↗</span></div><button class="story-more" type="button" aria-expanded="false">Déplier l’analyse +</button><div class="story-extra">Netflix teste la valeur d’une propriété intellectuelle au-delà du streaming : musique, spectacle vivant, produits dérivés et expériences physiques. La communauté de fans devient un public potentiel pour des événements payants.</div></div></article>
+<article class="story story-bottom"><div class="story-visual visual-ai"><div class="ai-mark">90s</div></div><div class="story-copy"><div><div class="story-kicker">04 — Culture & consommation</div><h3>La nostalgie ramène au tangible.</h3><p>Le retour de codes des années 1990 s’inscrit dans une tendance plus large vers les objets, le manuel et les rencontres physiques.</p></div><div class="story-foot"><span>Lecture · 45 sec</span><span class="arrow">↗</span></div><button class="story-more" type="button" aria-expanded="false">Déplier l’analyse +</button><div class="story-extra">La saturation numérique pourrait renforcer l’attrait pour les expériences analogiques. C’est une hypothèse culturelle proposée dans l’édition, pas une causalité démontrée.</div></div></article>
+<article class="story story-bottom"><div class="story-visual visual-stream"><span style="font:clamp(42px,6vw,78px) var(--serif);color:#536c5d;position:relative;z-index:2">NO</span></div><div class="story-copy"><div><div class="story-kicker">05 — Gouvernance</div><h3>Le pouvoir de dire non.</h3><p>La capacité à contredire un dirigeant devient un enjeu de qualité des décisions et de gouvernance.</p></div><div class="story-foot"><span>Lecture · 1 min</span><span class="arrow">↗</span></div><button class="story-more" type="button" aria-expanded="false">Déplier l’analyse +</button><div class="story-extra">La newsletter relie flatterie, concentration du pouvoir et difficulté à corriger une stratégie. Les chiffres de contrôle capitalistique et de lobbying sont rapportés par l’édition et doivent être lus avec leurs sources.</div></div></article>
+</section>
+<section class="metric-band"><div class="metric-lead">La liquidité se contracte. <em>La gouvernance se teste.</em></div><div class="metrics"><div class="metric"><b>12 Md$</b><span>Capitalisation stablecoin en moins sur 30 jours, selon la newsletter</span></div><div class="metric"><b>26,7 Md$</b><span>Recul rapporté des réserves USDT et USDC sur les plateformes depuis avril</span></div><div class="metric"><b>−20 %</b><span>Baisse du Bitcoin rapportée sur un mois</span></div></div></section>
+<section class="interactive-lab" aria-label="Outils interactifs">
+<div class="lab-panel reveal">
+<div class="lab-head"><div><div class="lab-kicker">03 / Lire les données</div><h2>La croissance change d'échelle.</h2><p class="lab-note">Comparaison des taux de croissance annuelle rapportés dans l'édition. Les chiffres ne constituent pas une série historique.</p></div></div>
+<div class="chart-tabs" role="group" aria-label="Affichage du graphique"><button type="button" data-chart="budget" aria-pressed="true">Indicateurs</button><button type="button" data-chart="secondary" aria-pressed="false">Autres chiffres</button></div>
+<div class="chart-bars" id="chartBars">
+<div class="chart-row"><span>Parlent d’argent</span><div class="chart-track"><div class="chart-fill" data-width="100"></div></div><span class="chart-value">60 %</span></div>
+<div class="chart-row"><span>Loud budgeting</span><div class="chart-track"><div class="chart-fill" data-width="70"></div></div><span class="chart-value">42 %</span></div>
+</div>
+<p class="chart-caption" id="chartCaption">60 % des jeunes Américains discuteraient d’argent avec leurs amis ; 42 % de la Gen Z pratiqueraient le loud budgeting, selon les chiffres cités.</p>
+</div>
+<div class="lab-panel reveal">
+<div class="lab-head"><div><div class="lab-kicker">04 / Cartographie des signaux</div><h2>Explorer les connexions.</h2><p class="lab-note">Sélectionne un nœud pour afficher son lien avec la tendance centrale.</p></div></div>
+<div class="mindmap" role="group" aria-label="Carte mentale interactive">
+<button class="map-node" data-map="audience" aria-pressed="true"><b>Audience</b><span>Communautés ciblées</span></button>
+<button class="map-node" data-map="culture" aria-pressed="false"><b>Culture</b><span>Objets et distinction</span></button>
+<button class="map-node" data-map="attention" aria-pressed="false"><b>Attention</b><span>Temps et arbitrages</span></button>
+<button class="map-node" data-map="confiance" aria-pressed="false"><b>Confiance</b><span>Qualité et relation</span></button>
+<div class="map-center">VALEUR<br>PERÇUE</div>
+</div>
+<div class="map-detail" id="mapDetail" aria-live="polite">Les audiences spécialisées créent de la valeur lorsqu'elles développent un lien durable avec leur communauté.</div>
+</div>
+</section>
+<section class="analysis" id="analyse"><div><div class="section-label">02 / Perspective NBS</div><h2>Ce qu'il faut<br>en retenir.</h2></div><div class="analysis-body"><p>Le point commun de ces signaux n'est pas technologique. Il est économique : <strong>la différenciation et la confiance deviennent des actifs</strong> quand l'offre et les contenus sont abondants.</p><p>Pour une marque ou un créateur, la piste n'est pas nécessairement de toucher plus de monde. C'est de mieux servir un public précis, de rendre l'expérience mémorable et de donner une raison de revenir.</p></div></section>
+<section class="sources" id="sources"><div class="sources-head"><h2>Sources & vérification</h2><span>TRANSPARENCE ÉDITORIALE</span></div><div class="source-list">
+<div class="source-item"><b>01 / Stablecoins</b>Contraction et réserves rapportées. <a href="https://www.bloomberg.com/news/articles/2026-11-16/stablecoin-market-shrinks-most-since-terra-luna-s-2022-crash" target="_blank" rel="noopener">Bloomberg ↗</a></div>
+<div class="source-item"><b>02 / Gen Z & argent</b>Études et tendances citées. <a href="https://newsroom.bankofamerica.com/content/newsroom/press-releases/2026/05/bofa-study-finds-fewer-gen-z-rely-on-family-for-financial-assist" target="_blank" rel="noopener">Bank of America ↗</a></div>
+<div class="source-item"><b>03 / KPop Demon Hunters</b>Annonce de la tournée. <a href="https://about.netflix.com/fr/news/aeg-presents-netflix-kpop-demon-hunters-golden-world-tour" target="_blank" rel="noopener">Netflix / AEG ↗</a></div>
+<div class="source-item"><b>04 / Nostalgie 90s</b>Indicateur de recherche cité. <a href="https://trends.google.com/trends/explore?date=today+5-y&q=microbangs" target="_blank" rel="noopener">Google Trends ↗</a></div>
+<div class="source-item"><b>05 / Gouvernance</b>Étude sur dirigeants et flatterie. <a href="https://www.kellogg.northwestern.edu/news_articles/2012/ceo-warning-press.aspx" target="_blank" rel="noopener">Kellogg School ↗</a></div>
+<div class="source-item"><b>Édition originale</b>Newsletter de Luc Allain. <a href="https://www.the-nbs.fr/" target="_blank" rel="noopener">The Next Big Sh*t ↗</a></div>
+</div></section>
+</main>
+<footer class="footer"><span>NBS® — Lecture du matin</span><span>Une lecture claire du monde qui change.</span><span>18 / 11 / 2026</span></footer>
 <script>
-const bar=document.getElementById('progress');function update(){const d=document.documentElement;const max=d.scrollHeight-d.clientHeight;bar.style.width=(max>0?d.scrollTop/max*100:0)+'%'}addEventListener('scroll',update,{passive:true});update();
-const links=[...document.querySelectorAll('.rail nav a')],sections=links.map(a=>document.querySelector(a.getAttribute('href'))).filter(Boolean);const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){links.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+e.target.id))}}),{rootMargin:'-20% 0px -65% 0px'});sections.forEach(s=>io.observe(s));
-document.getElementById('focus').addEventListener('click',()=>{document.body.classList.toggle('focus');document.getElementById('focus').textContent=document.body.classList.contains('focus')?'Quitter le mode lecture':'Mode lecture'});
+
+/* Scroll-linked motion: gentle depth, active section and reveal */
+const reduceMotion=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const heroArt=document.querySelector('.hero-art');
+let scrollTick=false;
+function onScrollMotion(){
+ if(scrollTick)return;scrollTick=true;
+ requestAnimationFrame(()=>{
+  const y=window.scrollY||0;
+  if(heroArt&&!reduceMotion&&y<innerHeight*1.4){heroArt.style.setProperty('--parallax-y',(y*.12)+'px');heroArt.style.transform='translate3d(0,'+(y*.045)+'px,0)'}
+  const sections=[...document.querySelectorAll('#edition,#signaux,#analyse,#sources')];
+  let current='';
+  sections.forEach(section=>{if(section.getBoundingClientRect().top<innerHeight*.42)current=section.id});
+  document.querySelectorAll('.navlinks a').forEach(a=>a.classList.toggle('is-current',a.getAttribute('href')==='#'+current));
+  scrollTick=false;
+ });
+}
+addEventListener('scroll',onScrollMotion,{passive:true});onScrollMotion();
+/* Staggered entrance for editorial cards */
+if(!reduceMotion&&'IntersectionObserver'in window){
+ const cardObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{
+  if(entry.isIntersecting){const card=entry.target;const siblings=[...card.parentElement.children];card.style.transitionDelay=(Math.min(siblings.indexOf(card),5)*85)+'ms';card.classList.add('is-visible');cardObserver.unobserve(card)}
+ }),{threshold:.1});
+ document.querySelectorAll('.story,.metric,.source-item').forEach(el=>{el.classList.add('reveal');cardObserver.observe(el)});
+}
+
+const bar=document.getElementById('progress');function updateProgress(){const max=document.documentElement.scrollHeight-innerHeight;bar.style.width=(max>0?scrollY/max*100:0)+'%'}addEventListener('scroll',updateProgress,{passive:true});updateProgress();
+
+const themeToggle=document.getElementById('themeToggle');themeToggle.addEventListener('click',()=>{const dark=document.body.dataset.theme!=='dark';document.body.dataset.theme=dark?'dark':'light';themeToggle.textContent=dark?'Mode clair':'Mode sombre';themeToggle.setAttribute('aria-pressed',String(dark));document.querySelector('meta[name=theme-color]').content=dark?'#171916':'#e9e6df'});
+document.querySelectorAll('.chart-tabs button').forEach(button=>button.addEventListener('click',()=>{
+ document.querySelectorAll('.chart-tabs button').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
+ const audience=button.dataset.chart==='secondary';
+ const rows=document.querySelectorAll('#chartBars .chart-row');
+ if(audience){rows[0].querySelector('span').textContent='Salaire à salaire';rows[0].querySelector('.chart-fill').style.width='100%';rows[0].querySelector('.chart-value').textContent='47 %';rows[1].style.display='grid';rows[1].querySelector('span').textContent='Projet retardé';rows[1].querySelector('.chart-fill').style.width='92%';rows[1].querySelector('.chart-value').textContent='55 %';document.getElementById('chartCaption').textContent='47 % vivraient d’un salaire à l’autre et 55 % auraient retardé un projet de vie pour des raisons financières, selon les chiffres cités.'}
+ else{rows[0].querySelector('span').textContent='Spécialisé';rows[0].querySelector('.chart-fill').style.width='100%';rows[0].querySelector('.chart-value').textContent='+20 %';rows[1].style.display='grid';rows[1].querySelector('span').textContent='Traditionnel';rows[1].querySelector('.chart-fill').style.width='35%';rows[1].querySelector('.chart-value').textContent='+7 %';document.getElementById('chartCaption').textContent='Les services spécialisés affichent une croissance rapportée près de trois fois supérieure aux services traditionnels.'}
+}));
+const mapCopy={audience:'La contraction des stablecoins peut signaler un retrait de capitaux ; elle doit être suivie indépendamment des mouvements de prix.',culture:'Les objets et codes culturels deviennent des marqueurs d’appartenance et de distinction.',attention:'Quand les contenus se multiplient, le temps disponible devient une ressource rare et disputée.',confiance:'La confiance, la qualité et la relation différencient une offre dans un marché saturé.'};
+document.querySelectorAll('.map-node').forEach(button=>button.addEventListener('click',()=>{document.querySelectorAll('.map-node').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));document.getElementById('mapDetail').textContent=mapCopy[button.dataset.map]}));
+document.querySelectorAll('.story-more').forEach(button=>button.addEventListener('click',()=>{const panel=button.nextElementSibling;const open=panel.classList.toggle('is-open');button.setAttribute('aria-expanded',String(open));button.textContent=open?'Refermer −':'Déplier l’analyse +'}));
+const revealObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('is-visible');revealObserver.unobserve(entry.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>revealObserver.observe(el));
+document.querySelectorAll('.chart-fill').forEach(el=>requestAnimationFrame(()=>el.style.width=el.dataset.width+'%'));
+
 </script></body></html>
