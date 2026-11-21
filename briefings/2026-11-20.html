@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="fr"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#e9e6df"><meta name="description" content="NBS — Lecture du matin. Briefing éditorial du vendredi 20 novembre 2026.">
+<title>NBS — Lecture du matin / 20 novembre 2026</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap');
+:root{color-scheme:light;--bg:#e9e6df;--paper:#f5f3ee;--ink:#20221f;--muted:#73756e;--line:#d5d1c8;--red:#a44c37;--green:#536c5d;--acid:#d7dc9b;--serif:'Playfair Display',Georgia,serif;--sans:'DM Sans',-apple-system,sans-serif;--mono:'DM Mono',monospace}
+body[data-theme=dark]{color-scheme:dark;--bg:#171916;--paper:#20231f;--ink:#eeeae1;--muted:#a4a69c;--line:#3a3e37;--red:#d17b62;--green:#8ba18e;--acid:#d7dc9b}
+body[data-theme=dark] .sources{background:#292d27}
+body[data-theme=dark] .source-item{color:#c0c2b9}
+body[data-theme=dark] .source-item a{border-color:#d17b6266}
+body[data-theme=dark] .analysis-body p{color:#c0c2b9}
+body[data-theme=dark] .analysis-body strong{color:var(--ink)}
+body[data-theme=dark] .metric-band{background:#30362e}
+body[data-theme=dark] .nav{background:var(--paper)}
+body[data-theme=dark] .story{background:var(--paper)}
+body[data-theme=dark] .hero-art{filter:brightness(.82) saturate(.88)}
+body[data-theme=dark] .ticker{background:#8e4635}
+body[data-theme=dark] .theme-toggle{border:1px solid var(--line);background:transparent;color:var(--ink)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}a,button{-webkit-tap-highlight-color:transparent}a{color:inherit;text-decoration-color:#a44c3766;text-underline-offset:4px}a:focus-visible,button:focus-visible{outline:1px solid #a44c37;outline-offset:4px;border-radius:2px}::selection{background:#ded8c9;color:#20221f}body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased}a{color:inherit}button{font:inherit;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.topline{height:34px;padding:0 4.2vw;background:var(--ink);color:#e9e6df;display:flex;align-items:center;justify-content:space-between;font:9px var(--mono);letter-spacing:.12em;text-transform:uppercase}
+.topline span:last-child{color:#b8b7ad}
+.nav{height:76px;padding:0 4.2vw;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);background:var(--paper);position:relative;z-index:5}
+.brand{font:500 17px var(--mono);letter-spacing:-.08em}.brand i{font-style:normal;color:var(--red)}
+.navlinks{display:flex;gap:28px;align-items:center;font:10px var(--mono);letter-spacing:.08em;text-transform:uppercase}.navlinks a{text-decoration:none;color:var(--muted)}.navlinks a:hover{color:var(--red)}
+.edition{font:9px var(--mono);color:var(--muted);letter-spacing:.08em}.theme-toggle{border:1px solid var(--line);background:transparent;color:var(--ink);padding:9px 12px;font:9px var(--mono);letter-spacing:.08em;text-transform:uppercase;border-radius:2px;white-space:nowrap}.theme-toggle:hover{border-color:var(--red);color:var(--red)}
+.hero{min-height:610px;background:var(--paper);display:grid;grid-template-columns:1.06fr .94fr;position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+.hero-copy{padding:clamp(54px,8vw,112px) 4.2vw 58px;position:relative;z-index:2;display:flex;flex-direction:column;justify-content:space-between}
+.eyebrow{display:flex;align-items:center;gap:12px;font:9px var(--mono);letter-spacing:.15em;text-transform:uppercase;color:var(--red)}.eyebrow:before{content:"";width:28px;height:1px;background:var(--red)}
+h1{font:400 clamp(58px,8.1vw,116px)/.91 var(--serif);letter-spacing:-.065em;margin:50px 0 26px;max-width:740px}
+h1 em{font-weight:400;color:var(--red)}
+.dek{max-width:390px;font:15px/1.7 var(--sans);color:var(--muted);margin:0}
+.hero-bottom{display:flex;align-items:end;justify-content:space-between;margin-top:50px;gap:20px}
+.meta{display:flex;gap:18px;flex-wrap:wrap;font:9px var(--mono);letter-spacing:.08em;color:var(--muted);text-transform:uppercase}
+.scroll-cue{font:9px var(--mono);letter-spacing:.1em;color:var(--red);white-space:nowrap}
+.hero-art{position:relative;min-height:610px;background:#d8d8c8;overflow:hidden;isolation:isolate}
+.art-grain{position:absolute;inset:0;opacity:.18;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.35'/%3E%3C/svg%3E");mix-blend-mode:multiply;z-index:4;pointer-events:none}
+.orbit{position:absolute;width:min(66vw,680px);aspect-ratio:1;border:1px solid rgba(32,34,31,.35);border-radius:50%;left:50%;top:50%;transform:translate(-50%,-50%);z-index:1}
+.orbit:before,.orbit:after{content:"";position:absolute;border:1px solid rgba(32,34,31,.24);border-radius:50%;inset:10% -7%;transform:rotate(34deg)}.orbit:after{inset:23% -14%;transform:rotate(-38deg)}
+.disc{position:absolute;width:54%;aspect-ratio:1;border-radius:50%;left:50%;top:50%;transform:translate(-50%,-50%);background:radial-gradient(circle at 33% 28%,#f2e9cf 0 3%,#d1a78a 14%,#a44c37 42%,#612d29 70%,#252522 100%);box-shadow:inset -35px -40px 70px #24231f66,30px 45px 80px #27251f33;z-index:2}
+.disc:before{content:"";position:absolute;inset:15%;border:1px solid #f4dfc488;border-radius:50%;transform:rotate(28deg) scaleX(.68)}
+.disc:after{content:"";position:absolute;inset:29% -12%;border:1px solid #f4dfc477;border-radius:50%;transform:rotate(-42deg)}
+.art-label{position:absolute;z-index:3;font:9px var(--mono);letter-spacing:.13em;text-transform:uppercase}.art-label.one{top:11%;left:10%}.art-label.two{bottom:11%;right:9%;text-align:right}.art-index{position:absolute;right:9%;top:10%;font:clamp(58px,10vw,130px)/1 var(--serif);color:#252822;opacity:.78;letter-spacing:-.08em}
+.hero-art .cross{position:absolute;width:22px;height:22px;left:16%;bottom:18%;z-index:3}.cross:before,.cross:after{content:"";position:absolute;background:#a44c37}.cross:before{height:1px;width:22px;top:10px}.cross:after{width:1px;height:22px;left:10px}
+.ticker{background:var(--red);color:#f5f0e8;overflow:hidden;white-space:nowrap;padding:12px 0;font:9px var(--mono);letter-spacing:.14em;text-transform:uppercase}.ticker span{display:inline-block;padding-left:25px}
+.section-intro{padding:82px 4.2vw 36px;display:grid;grid-template-columns:1fr 2fr;gap:35px;align-items:start}.section-label{font:9px var(--mono);letter-spacing:.15em;text-transform:uppercase;color:var(--red);padding-top:10px}.section-intro h2{font:400 clamp(32px,4.8vw,64px)/1.02 var(--serif);letter-spacing:-.045em;margin:0;max-width:780px}.section-intro p{font:13px/1.7 var(--sans);color:var(--muted);max-width:430px;margin:18px 0 0}
+.stories{padding:20px 4.2vw 90px;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:18px}
+.story{background:var(--paper);border:1px solid var(--line);min-width:0;position:relative;overflow:hidden}
+.story-main{grid-column:span 7;display:grid;grid-template-columns:1fr .88fr;min-height:430px}
+.story-side{grid-column:span 5;display:flex;flex-direction:column;min-height:430px}
+.story-bottom{grid-column:span 4;min-height:340px}
+.story-visual{position:relative;overflow:hidden;background:#d9d7cd;min-height:230px;display:flex;align-items:center;justify-content:center}
+.story-main .story-visual{min-height:100%}
+.visual-stream{background:#d9d8c9}.visual-stream:before{content:"";position:absolute;width:70%;aspect-ratio:1;border:1px solid #52695a;border-radius:50%;box-shadow:0 0 0 25px #52695a12,0 0 0 50px #52695a10,0 0 0 75px #52695a0c}
+.visual-stream:after{content:"";position:absolute;width:44%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 35% 30%,#f3eddd,#8a9b7d 48%,#394c40 80%);box-shadow:20px 24px 40px #394c4033}
+.visual-fade{background:#d2c6b4}.shirt{width:54%;height:66%;background:linear-gradient(135deg,#e8ddc7,#a18d72 55%,#706451);clip-path:polygon(25% 0,42% 8%,58% 8%,75% 0,100% 19%,83% 40%,73% 32%,73% 100%,27% 100%,27% 32%,17% 40%,0 19%);filter:drop-shadow(15px 20px 16px #453b2d44);position:relative}.shirt:after{content:"";position:absolute;inset:8%;background:repeating-linear-gradient(110deg,transparent 0 8px,#655a4933 9px 10px);mix-blend-mode:multiply}
+.visual-game{background:#222722;color:#d9dc9b}.game-ring{width:62%;aspect-ratio:1;border:1px solid #d9dc9b;border-radius:50%;position:relative;box-shadow:0 0 0 25px #d9dc9b0c,0 0 0 50px #d9dc9b08}.game-ring:before{content:"VI";position:absolute;inset:0;display:grid;place-items:center;font:clamp(60px,8vw,110px) var(--serif);letter-spacing:-.08em}.game-ring:after{content:"ATTENTION IS THE NEW TERRITORY";position:absolute;bottom:-38px;left:50%;transform:translateX(-50%);white-space:nowrap;font:8px var(--mono);letter-spacing:.12em}
+.visual-ai{background:#d8d9d0}.ai-mark{font:clamp(42px,6vw,78px) var(--serif);letter-spacing:-.08em;color:#536c5d;position:relative}.ai-mark:before,.ai-mark:after{content:"";position:absolute;left:50%;top:50%;width:150%;height:1px;background:#536c5d66;transform:translate(-50%,-50%) rotate(45deg)}.ai-mark:after{transform:translate(-50%,-50%) rotate(-45deg)}
+.story-copy{padding:28px;display:flex;flex-direction:column;justify-content:space-between;min-width:0}.story-kicker{font:9px var(--mono);letter-spacing:.13em;color:var(--red);text-transform:uppercase}.story h3{font:400 clamp(25px,3vw,38px)/1.05 var(--serif);letter-spacing:-.035em;margin:17px 0 12px}.story p{font:12px/1.7 var(--sans);color:var(--muted);margin:0}.story-foot{margin-top:24px;display:flex;justify-content:space-between;align-items:center;gap:10px;font:9px var(--mono);color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
+.arrow{width:30px;height:30px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;color:var(--red);font-size:15px}
+.story-side .story-visual{height:48%;min-height:190px}.story-side .story-copy{flex:1}
+.story-bottom .story-visual{height:190px;min-height:190px}.story-bottom .story-copy{padding:23px}.story-bottom h3{font-size:27px}
+.metric-band{margin:0 4.2vw 90px;background:#252923;color:#f3f0e7;padding:45px 4.2vw;display:grid;grid-template-columns:1fr 2fr;gap:35px;align-items:center}
+.metric-lead{font:400 clamp(24px,3.2vw,42px)/1.1 var(--serif);max-width:300px}.metric-lead em{color:var(--acid);font-style:normal}
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.metric{border-left:1px solid #ffffff3a;padding-left:20px}.metric b{font:400 clamp(32px,4.5vw,58px)/1 var(--serif);color:var(--acid);letter-spacing:-.05em}.metric span{display:block;margin-top:11px;font:9px/1.5 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:#b8b9ad}
+.analysis{padding:0 4.2vw 90px;display:grid;grid-template-columns:1fr 2fr;gap:35px}.analysis h2{font:400 42px/1 var(--serif);letter-spacing:-.04em;margin:0}.analysis-body{border-top:1px solid var(--ink);padding-top:20px;display:grid;grid-template-columns:1fr 1fr;gap:30px}.analysis-body p{font:14px/1.8 var(--sans);margin:0;color:#55584f}.analysis-body strong{color:var(--ink)}
+.sources{background:#dedbd3;padding:55px 4.2vw 60px}.sources-head{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid #c4c0b7;padding-bottom:18px}.sources h2{font:400 34px var(--serif);margin:0}.sources-head span{font:9px var(--mono);letter-spacing:.12em;color:var(--muted)}.source-list{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;padding-top:24px}.source-item{font:11px/1.5 var(--sans);color:#62645d}.source-item b{display:block;font:9px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--red);margin-bottom:8px}.source-item a{text-decoration:none;border-bottom:1px solid #a44c3766;padding-bottom:2px}
+.footer{background:var(--ink);color:#e9e6df;padding:30px 4.2vw;display:flex;justify-content:space-between;align-items:center;font:9px var(--mono);letter-spacing:.12em;text-transform:uppercase}.footer span:last-child{color:#aaa99f}
+.progress{position:fixed;left:0;top:0;height:2px;width:0;background:var(--red);z-index:20}
+@media(max-width:760px){
+.topline{padding:0 18px;font-size:8px}.nav{height:62px;padding:0 20px}.navlinks{display:none}.edition{font-size:8px}
+.hero{display:flex;flex-direction:column;min-height:0}.hero-copy{padding:43px 22px 30px;min-height:410px}h1{font-size:clamp(55px,15vw,76px);margin:46px 0 22px;max-width:560px}.dek{font-size:14px}.hero-bottom{margin-top:36px;align-items:start;flex-direction:column}.meta{gap:9px 14px;font-size:8px}.scroll-cue{display:none}
+.hero-art{min-height:360px}.orbit{width:88vw}.disc{width:55%}.art-index{font-size:76px}.art-label{font-size:8px}
+.ticker{font-size:8px}.section-intro{padding:58px 22px 20px;display:block}.section-label{margin-bottom:22px}.section-intro h2{font-size:43px}.section-intro p{font-size:13px;margin-top:14px}
+.stories{padding:14px 14px 58px;display:flex;flex-direction:column;gap:12px}.story-main{display:flex;flex-direction:column;min-height:0}.story-main .story-visual{min-height:240px}.story-side{min-height:0}.story-side .story-visual{height:220px;min-height:220px}.story-bottom{min-height:0}.story-bottom .story-visual{height:190px;min-height:190px}.story-copy{padding:22px}.story h3{font-size:30px}.story p{font-size:13px}.story-bottom h3{font-size:28px}
+.metric-band{margin:0 14px 60px;padding:30px 22px;display:block}.metric-lead{font-size:30px;max-width:100%;margin-bottom:28px}.metrics{gap:8px}.metric{padding-left:10px}.metric b{font-size:31px}.metric span{font-size:8px}
+.analysis{padding:0 22px 60px;display:block}.analysis h2{font-size:37px;margin-bottom:25px}.analysis-body{grid-template-columns:1fr;gap:16px}.analysis-body p{font-size:13px}
+.sources{padding:38px 22px 45px}.sources h2{font-size:29px}.sources-head span{font-size:8px}.source-list{grid-template-columns:1fr 1fr;gap:20px 14px}.source-item{font-size:11px}
+.footer{padding:22px;display:block;line-height:2}.footer span{display:block}
+}
+@media(min-width:761px) and (max-width:1050px){.hero{min-height:540px}.hero-art{min-height:540px}.story-main{grid-column:span 12;min-height:360px}.story-side{grid-column:span 6}.story-bottom{grid-column:span 6}.metric-band{grid-template-columns:1fr}.analysis{grid-template-columns:1fr 2fr}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+ 
+.interactive-lab{padding:0 4.2vw 88px;display:grid;grid-template-columns:1.1fr .9fr;gap:18px}
+.lab-panel{background:var(--paper);border:1px solid var(--line);padding:28px;min-width:0}
+.lab-head{display:flex;justify-content:space-between;align-items:start;gap:18px;margin-bottom:24px}
+.lab-kicker{font:9px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--red)}
+.lab-panel h2{font:400 clamp(25px,3vw,38px)/1.05 var(--serif);letter-spacing:-.04em;margin:10px 0 0}
+.lab-note{font:11px/1.6 var(--sans);color:var(--muted);max-width:300px;margin:9px 0 0}
+.chart-tabs{display:flex;gap:6px;flex-wrap:wrap}
+.chart-tabs button,.map-node,.story-more{border:1px solid var(--line);background:transparent;color:var(--ink);padding:9px 12px;font:9px var(--mono);letter-spacing:.06em;cursor:pointer;transition:background .2s,color .2s,border-color .2s}
+.chart-tabs button[aria-pressed=true],.map-node[aria-pressed=true]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.chart-bars{display:grid;gap:22px;margin:30px 0 18px}
+.chart-row{display:grid;grid-template-columns:120px 1fr 48px;gap:12px;align-items:center;font:10px var(--mono)}
+.chart-track{height:14px;background:var(--bg);position:relative;overflow:hidden}
+.chart-fill{height:100%;width:0;background:var(--green);transition:width 1s cubic-bezier(.2,.7,.2,1)}
+.chart-row:nth-child(2) .chart-fill{background:var(--red)}
+.chart-value{text-align:right;font-weight:500}
+.chart-caption{font:11px/1.6 var(--sans);color:var(--muted);border-top:1px solid var(--line);padding-top:15px}
+.mindmap{position:relative;min-height:255px;display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:center;padding:18px 0}
+.mindmap:before,.mindmap:after{content:"";position:absolute;left:50%;top:50%;width:36%;height:1px;background:var(--line);transform:translate(-50%,-50%) rotate(28deg);z-index:0}
+.mindmap:after{transform:translate(-50%,-50%) rotate(-28deg)}
+.map-node{position:relative;z-index:1;min-height:68px;text-align:left;padding:13px;background:var(--paper)}
+.map-node b{display:block;font:11px var(--mono);margin-bottom:5px}
+.map-node span{display:block;font:10px/1.4 var(--sans);color:var(--muted)}
+.map-node[aria-pressed=true] span{color:inherit;opacity:.78}
+.map-center{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:2;background:var(--red);color:#fff7ed;border:0;border-radius:50%;width:76px;height:76px;display:grid;place-items:center;text-align:center;font:9px/1.3 var(--mono);letter-spacing:.06em;box-shadow:0 0 0 8px var(--paper)}
+.map-detail{min-height:56px;padding:13px 15px;background:var(--bg);font:11px/1.6 var(--sans);color:var(--muted)}
+.story-more{margin-top:18px;align-self:flex-start}
+.story-extra{display:none;margin-top:14px;padding-top:14px;border-top:1px solid var(--line);font:12px/1.7 var(--sans);color:var(--muted)}
+.story-extra.is-open{display:block;animation:fadeUp .35s ease both}
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .65s ease,transform .65s cubic-bezier(.2,.7,.2,1)}
+.reveal.is-visible{opacity:1;transform:none}
+@keyframes fadeUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.chart-fill{transition:none}*{scroll-behavior:auto!important;animation:none!important}}
+body[data-theme=dark] .chart-track,body[data-theme=dark] .map-detail{background:#171916}
+body[data-theme=dark] .map-node{background:var(--paper)}
+@media(max-width:760px){.interactive-lab{padding:0 14px 58px;grid-template-columns:1fr;gap:12px}.lab-panel{padding:21px}.chart-row{grid-template-columns:95px 1fr 42px;gap:8px}.mindmap{min-height:245px}.map-center{width:66px;height:66px}.map-node{min-height:66px;padding:10px}.lab-head{display:block}.chart-tabs{margin-top:18px}}
+
+/* Navigation motion layer */
+@keyframes orbitDrift{from{transform:translate(-50%,-50%) rotate(0deg)}to{transform:translate(-50%,-50%) rotate(360deg)}}
+@keyframes orbitCounter{from{transform:rotate(34deg)}to{transform:rotate(394deg)}}
+@keyframes discFloat{0%,100%{translate:0 0}50%{translate:0 -13px}}
+@keyframes crossPulse{0%,100%{opacity:.35;scale:.75}50%{opacity:1;scale:1.2}}
+@keyframes tickerTravel{from{transform:translateX(0)}to{transform:translateX(-35%)}}
+@keyframes softGlow{0%,100%{box-shadow:0 0 0 0 #a44c3720}50%{box-shadow:0 0 0 13px #a44c3700}}
+.hero-art .orbit{animation:orbitDrift 65s linear infinite}
+.hero-art .orbit:before{animation:orbitCounter 42s linear infinite}
+.hero-art .disc{animation:discFloat 7s ease-in-out infinite}
+.hero-art .cross{animation:crossPulse 3.8s ease-in-out infinite}
+.hero-art .art-index{animation:softGlow 6s ease-in-out infinite}
+.ticker span{will-change:transform;animation:tickerTravel 24s linear infinite}
+.story{transition:transform .55s cubic-bezier(.2,.7,.2,1),box-shadow .55s,border-color .35s}
+.story:hover{transform:translateY(-7px);box-shadow:0 18px 36px #22221b12;border-color:var(--red)}
+.story-visual:after{transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.story:hover .visual-stream:after{transform:scale(1.08) rotate(8deg)}
+.story:hover .shirt{transform:scale(1.045) rotate(-2deg)}
+.shirt{transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.arrow{transition:transform .35s,background .35s,color .35s}
+.story:hover .arrow{transform:rotate(45deg);background:var(--red);color:#fff;border-color:var(--red)}
+.navlinks a{position:relative;transition:color .25s}
+.navlinks a:after{content:"";position:absolute;left:0;right:100%;bottom:-7px;height:1px;background:var(--red);transition:right .3s}
+.navlinks a:hover:after,.navlinks a.is-current:after{right:0}
+.section-intro,.metric-band,.analysis,.sources{scroll-margin-top:22px}
+.lab-panel{transition:transform .5s cubic-bezier(.2,.7,.2,1),box-shadow .5s}
+.lab-panel:hover{transform:translateY(-4px);box-shadow:0 15px 35px #22221b0d}
+.map-center{animation:softGlow 5s ease-in-out infinite}
+.map-node{transition:transform .25s,background .25s,color .25s}
+.map-node:hover{transform:translateY(-3px)}
+.chart-fill{position:relative}
+.chart-fill:after{content:"";position:absolute;inset:0;background:linear-gradient(105deg,transparent 20%,#ffffff55 50%,transparent 80%);transform:translateX(-110%);animation:chartSheen 3.8s ease-in-out infinite}
+@keyframes chartSheen{0%,35%{transform:translateX(-110%)}70%,100%{transform:translateX(110%)}}
+.progress{box-shadow:0 0 8px #a44c3777}
+@media(hover:none){.story:hover,.lab-panel:hover{transform:none;box-shadow:none}.story:active{transform:scale(.99)}}
+@media(prefers-reduced-motion:reduce){.hero-art .orbit,.hero-art .orbit:before,.hero-art .disc,.hero-art .cross,.hero-art .art-index,.ticker span,.map-center,.chart-fill:after{animation:none!important}.story,.lab-panel,.story-visual:after,.shirt,.arrow,.navlinks a:after,.map-node{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="progress" id="progress"></div>
+<div class="topline"><span>Une veille indépendante, chaque matin</span><span>Paris · 20.11.2026</span></div>
+<header class="nav"><a class="brand" href="../" style="text-decoration:none">NBS<i>®</i></a><nav class="navlinks"><a href="#edition">L'édition</a><a href="#signaux">Les signaux</a><a href="#analyse">Perspective</a><a href="#sources">Sources</a></nav><div style="display:flex;align-items:center;gap:18px"><span class="edition">VOL. 03 &nbsp; / &nbsp; 2026</span><button class="theme-toggle" id="themeToggle" type="button" aria-pressed="false">Mode sombre</button></div></header>
+<main id="edition">
+<section class="hero">
+<div class="hero-copy"><div><div class="eyebrow">Vendredi 20 novembre 2026 &nbsp; / &nbsp; Édition 03</div><h1>L'IA prend<br>les <em>commandes.</em><br>Le contrôle<br>devient clé.</h1><p class="dek">Entreprises autonomes, communautés de niche et économie de la surveillance : quatre mouvements redessinent la valeur.</p></div><div class="hero-bottom"><div class="meta"><span>5 min de lecture</span><span>Business</span><span>Technologie</span><span>Société</span></div><span class="scroll-cue">DÉFILER POUR EXPLORER ↓</span></div></div>
+<div class="hero-art" aria-label="Composition abstraite autour de l'autonomie, du contrôle et des réseaux"><div class="art-index">03</div><div class="art-label one">Signal / Business<br>Autonomy & trust</div><div class="orbit"></div><div class="disc"></div><div class="cross"></div><div class="art-label two">NBS Intelligence<br>Daily fieldnotes</div><div class="art-grain"></div></div>
+</section>
+<div class="ticker"><span>L'AUTONOMIE CRÉE UN BESOIN DE CONTRÔLE &nbsp; ✳ &nbsp; LES COMMUNAUTÉS DEVIENNENT DES INFRASTRUCTURES &nbsp; ✳ &nbsp; L'AUTONOMIE CRÉE UN BESOIN DE CONTRÔLE &nbsp; ✳ &nbsp;</span></div>
+<section class="section-intro" id="signaux"><div class="section-label">01 / Les signaux du jour</div><div><h2>Quand les systèmes deviennent autonomes, la confiance devient une infrastructure.</h2><p>Les agents IA déplacent le rôle de l'entrepreneur. Les communautés transforment l'engagement en valeur. Et chaque nouvelle capacité technologique fait émerger ses propres mécanismes de contrôle.</p></div></section>
+<section class="stories">
+<article class="story story-main"><div class="story-visual visual-stream"><span style="position:absolute;z-index:2;left:10%;top:10%;font:9px var(--mono);letter-spacing:.1em;color:#34473a">01 / AUTONOMY</span><span style="position:absolute;z-index:2;right:9%;bottom:9%;font:9px var(--mono);color:#34473a">AI COMPANIES</span></div><div class="story-copy"><div><div class="story-kicker">01 — Entrepreneuriat & IA</div><h3>L'IA pourrait gérer des entreprises.</h3><p>Le Delaware étudie un cadre d'« Artificial Intelligence Company » où une IA pourrait assurer les opérations quotidiennes d'une société.</p></div><div class="story-foot"><span>Lecture · 1 min</span><span class="arrow">↗</span></div><button class="story-more" type="button" aria-expanded="false">Déplier l’analyse +</button><div class="story-extra">Le changement potentiel est organisationnel : l'entrepreneur devient davantage allocateur de capital et superviseur. Les contrôles de paiement, les limites d'action et la traçabilité deviennent des briques essentielles. Le texte législatif doit être vérifié dans sa version à jour : la newsletter décrit une proposition.</div></div></article>
+<article class="story story-side"><div class="story-visual visual-fade"><div class="shirt"></div><span style="position:absolute;top:12px;left:14px;font:9px var(--mono);color:#554a3b">02 / COMMUNITY</span></div><div class="story-copy"><div><div class="story-kicker">02 — Sport & communautés</div><h3>Les run clubs se spécialisent.</h3><p>La participation aux clubs Strava aurait progressé de 59 % en deux ans. En France, le nombre de clubs aurait été multiplié par 5,2 en 2025.</p></div><div class="story-foot"><span>Lecture · 1 min</span><span class="arrow">↗</span></div><button class="story-more" type="button" aria-expanded="false">Déplier l’analyse +</button><div class="story-extra">La valeur commerciale ne vient pas seulement de la visibilité : elle vient de rendez-vous réguliers, de confiance et d'identité partagée. Une marque peut contribuer à une communauté, mais ne peut pas simplement l'acheter sans risquer de l'abîmer.</div></div></article>
+<article class="story story-bottom"><div class="story-visual visual-game"><div class="game-ring"></div><span style="position:absolute;top:12px;left:14px;font:9px var(--mono);color:#554a3b">03 / TRUST & CONTROL</span></div><div class="story-copy"><div><div class="story-kicker">03 — Éducation & sécurité</div><h3>La fraude IA crée un marché du contrôle.</h3><p>Détection de textes, surveillance d'examens et outils anti-triche se développent face à l'usage de l'IA pour contourner les évaluations.</p></div><div class="story-foot"><span>Lecture · 1 min</span><span class="arrow">↗</span></div><button class="story-more" type="button" aria-expanded="false">Déplier l’analyse +</button><div class="story-extra">Les systèmes de détection restent imparfaits. Les réponses robustes combinent prévention, vérification, conception des évaluations et droit de contestation. Une détection probabiliste ne devrait pas décider seule d'une sanction.</div></div></article>
+<article class="story story-bottom"><div class="story-visual visual-ai"><div class="ai-mark">CN</div></div><div class="story-copy"><div><div class="story-kicker">04 — Industrie & géopolitique</div><h3>La Chine déplace ses usines.</h3><p>Des industriels chinois implantent leurs capacités à l'étranger pour se rapprocher des marchés et réduire certaines frictions commerciales.</p></div><div class="story-foot"><span>Lecture · 1 min</span><span class="arrow">↗</span></div><button class="story-more" type="button" aria-expanded="false">Déplier l’analyse +</button><div class="story-extra">La dépendance industrielle ne se lit pas uniquement sur l'étiquette « made in ». Il faut aussi cartographier la propriété, les fournisseurs, les composants critiques, le financement et les capacités locales.</div></div></article>
+</section>
+<section class="metric-band"><div class="metric-lead">La valeur change de place. <em>La confiance devient le socle.</em></div><div class="metrics"><div class="metric"><b>+59 %</b><span>Participation aux clubs Strava en deux ans, selon la newsletter</span></div><div class="metric"><b>145</b><span>Parcs industriels liés à la Chine recensés, selon la newsletter</span></div><div class="metric"><b>75 000 $</b><span>Récompense annoncée en Corée du Sud pour un signalement confirmé, selon la newsletter</span></div></div></section>
+<section class="interactive-lab" aria-label="Cartographie interactive">
+<div class="lab-panel reveal"><div class="lab-head"><div><div class="lab-kicker">03 / Cartographie des signaux</div><h2>Explorer les connexions.</h2><p class="lab-note">Sélectionne un nœud pour comprendre la relation entre les transformations du jour.</p></div></div>
+<div class="mindmap" role="group" aria-label="Carte mentale interactive">
+<button class="map-node" data-map="autonomie" aria-pressed="true"><b>Autonomie</b><span>Agents et entreprises</span></button>
+<button class="map-node" data-map="communaute" aria-pressed="false"><b>Communauté</b><span>Engagement durable</span></button>
+<button class="map-node" data-map="controle" aria-pressed="false"><b>Contrôle</b><span>Preuve et confiance</span></button>
+<button class="map-node" data-map="industrie" aria-pressed="false"><b>Industrie</b><span>Chaînes globales</span></button>
+<div class="map-center">NOUVEAUX<br>ÉQUILIBRES</div>
+</div><div class="map-detail" id="mapDetail" aria-live="polite">Plus les agents exécutent des actions, plus les organisations ont besoin de garde-fous, d'autorisations et de traçabilité.</div></div>
+<div class="lab-panel reveal"><div class="lab-head"><div><div class="lab-kicker">04 / Lecture transversale</div><h2>Quatre mutations, un même enjeu.</h2><p class="lab-note">Les faits chiffrés ci-dessus sont attribués à la newsletter ; leurs méthodes et périmètres ne sont pas tous détaillés.</p></div></div>
+<div class="analysis-body"><p><strong>Autonomie sans contrôle :</strong> risque opérationnel et juridique.</p><p><strong>Communauté sans confiance :</strong> audience fragile et faible rétention.</p><p><strong>Détection sans recours :</strong> erreurs et sanctions injustes.</p><p><strong>Relocalisation sans cartographie :</strong> dépendances invisibles.</p></div></div>
+</section>
+<section class="analysis" id="analyse"><div><div class="section-label">02 / Perspective NBS</div><h2>Ce qu'il faut<br>en retenir.</h2></div><div class="analysis-body"><p>La newsletter met en lumière une même bascule : <strong>l'exécution devient plus accessible, mais la confiance et la supervision deviennent plus stratégiques.</strong></p><p>Les opportunités les plus solides se situent souvent autour des nouvelles capacités : audit des agents, outils de contrôle financier, services utiles aux communautés, garanties contre les faux positifs et cartographie des chaînes d'approvisionnement.</p><p>Il ne s'agit pas de considérer chaque tendance comme une certitude. Plusieurs chiffres et annonces restent à recouper avec les documents originaux.</p></div></section>
+<section class="sources" id="sources"><div class="sources-head"><h2>Sources & vérification</h2><span>TRANSPARENCE ÉDITORIALE</span></div><div class="source-list">
+<div class="source-item"><b>01 / Delaware — projet de loi</b>Cadre proposé pour les sociétés pilotées par IA. <a href="https://spotlightdelaware.org/wp-content/uploads/2026/06/HB-re-Artificial-Intelligence-Regulatory-Sandbox-Company-1.pdf" target="_blank" rel="noopener">Document législatif ↗</a></div>
+<div class="source-item"><b>02 / Communautés de running</b>Exemples de communautés spécialisées. <a href="https://frontrunnersparis.org/" target="_blank" rel="noopener">Front Runners Paris ↗</a> · <a href="https://blackgirlsrun.com/about/" target="_blank" rel="noopener">Black Girls RUN! ↗</a></div>
+<div class="source-item"><b>03 / Détection et surveillance</b>Outils mentionnés dans la newsletter. <a href="https://fr.turnitin.com/solutions/topics/redaction-assistee-par-ia" target="_blank" rel="noopener">Turnitin ↗</a> · <a href="https://proctorio.com/company/about" target="_blank" rel="noopener">Proctorio ↗</a></div>
+<div class="source-item"><b>04 / Corée du Sud — récompense anti-fraude</b>Annonce rapportée par la newsletter. <a href="https://www.bloomberg.com/news/articles/2026-11-18/south-korea-proposes-75-000-bounties-to-catch-ai-exam-cheats" target="_blank" rel="noopener">Bloomberg ↗</a></div>
+<div class="source-item"><b>05 / Implantations industrielles chinoises</b>Analyse des parcs industriels à l'étranger. <a href="https://news.bloomberglaw.com/tariff-news/beijings-new-strategy-made-by-china-but-not-made-in-china" target="_blank" rel="noopener">Bloomberg Law ↗</a></div>
+<div class="source-item"><b>06 / Émeutes et assurance</b>Bilan provisoire de 207 M€ rapporté par la newsletter. <a href="https://www.lesechos.fr/finance-marches/banque-assurances/le-cout-des-emeutes-du-17-octobre-depasse-les-200-millions-deuros-2263533" target="_blank" rel="noopener">Les Échos ↗</a></div>
+<div class="source-item"><b>07 / Anthropic — opération financière</b>Montants rapportés par la newsletter. <a href="https://live.euronext.com/en/financial-news/anthropic-raises-record-81-billion-ipo-15-trillion-valuation" target="_blank" rel="noopener">Euronext ↗</a></div>
+<div class="source-item"><b>08 / Arcom — pluralisme politique</b>Règles annoncées pour les créateurs vidéo. <a href="https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-les-createurs-de-contenus-devront-respecter-le-pluralisme-annonce-larcom-19-11-2026-YOMWY4UBRBDTHIQF2K2OTUJHJE.php" target="_blank" rel="noopener">Le Parisien ↗</a></div>
+<div class="source-item"><b>09 / Newsletter originale</b>Luc Allain — The Next Big Sh*t, « La fin des entrepreneurs ». <a href="https://www.the-nbs.fr/p/la-d-lation-ia-commence" target="_blank" rel="noopener">Lire l'édition ↗</a></div>
+</div></section>
+</main>
+<footer class="footer"><span>NBS® — Lecture du matin</span><span>Une lecture claire du monde qui change.</span><span>20 / 11 / 2026</span></footer>
+<script>
+const reduceMotion=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const progress=document.getElementById('progress');
+function updateProgress(){const max=document.documentElement.scrollHeight-innerHeight;progress.style.width=(max>0?scrollY/max*100:0)+'%'}
+addEventListener('scroll',updateProgress,{passive:true});updateProgress();
+const themeToggle=document.getElementById('themeToggle');
+themeToggle.addEventListener('click',()=>{const dark=document.body.dataset.theme!=='dark';document.body.dataset.theme=dark?'dark':'light';themeToggle.textContent=dark?'Mode clair':'Mode sombre';themeToggle.setAttribute('aria-pressed',String(dark));document.querySelector('meta[name=theme-color]').content=dark?'#171916':'#e9e6df'});
+const mapCopy={autonomie:'Plus les agents exécutent des actions, plus les organisations ont besoin de garde-fous, d’autorisations et de traçabilité.',communaute:'Une communauté forte repose sur des rendez-vous, des codes partagés et une confiance que la marque doit respecter.',controle:'La détection et la surveillance doivent être accompagnées de transparence, de preuves et de voies de recours.',industrie:'La dépendance se mesure par la propriété, les fournisseurs, les composants et le contrôle des capacités, pas seulement par le pays de fabrication.'};
+document.querySelectorAll('.map-node').forEach(button=>button.addEventListener('click',()=>{document.querySelectorAll('.map-node').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));document.getElementById('mapDetail').textContent=mapCopy[button.dataset.map]}));
+document.querySelectorAll('.story-more').forEach(button=>button.addEventListener('click',()=>{const panel=button.nextElementSibling;const open=panel.classList.toggle('is-open');button.setAttribute('aria-expanded',String(open));button.textContent=open?'Refermer −':'Déplier l’analyse +'}));
+if(!reduceMotion&&'IntersectionObserver'in window){const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('is-visible');observer.unobserve(entry.target)}}),{threshold:.12});document.querySelectorAll('.story,.metric,.source-item,.lab-panel').forEach(el=>{el.classList.add('reveal');observer.observe(el)})}
+const heroArt=document.querySelector('.hero-art');let busy=false;addEventListener('scroll',()=>{if(busy||reduceMotion)return;busy=true;requestAnimationFrame(()=>{const y=scrollY;if(y<innerHeight*1.4&&heroArt)heroArt.style.transform='translate3d(0,'+(y*.035)+'px,0)';busy=false})},{passive:true});
+</script></body></html>
