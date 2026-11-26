@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#e9e6df">
+<meta name="description" content="La fin des patrons — NBS, édition du jeudi 26 novembre 2026.">
+<title>La fin des patrons — NBS®</title>
+<script>
+(function(){try{var saved=localStorage.getItem('nbs-theme');var theme=saved||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.dataset.theme=theme;}catch(e){document.documentElement.dataset.theme='light';}})();
+</script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap');
+:root{color-scheme:light;--bg:#e9e6df;--paper:#f5f3ee;--ink:#20221f;--muted:#73756e;--line:#d5d1c8;--red:#a44c37;--green:#536c5d;--acid:#d7dc9b;--serif:'Playfair Display',Georgia,serif;--sans:'DM Sans',-apple-system,sans-serif;--mono:'DM Mono',monospace}
+:root[data-theme=dark]{color-scheme:dark;--bg:#171916;--paper:#20231f;--ink:#eeeae1;--muted:#a4a69c;--line:#3a3e37;--red:#d17b62;--green:#8ba18e;--acid:#d7dc9b}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased;transition:background .25s,color .25s}
+a{color:inherit;text-decoration:none}
+a:hover{color:var(--red)}
+button{font:inherit;cursor:pointer}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:1px solid var(--red);outline-offset:4px}
+::selection{background:#ded8c9;color:#20221f}
+.topline{height:34px;padding:0 4.2vw;background:var(--ink);color:#e9e6df;display:flex;align-items:center;justify-content:space-between;font:9px var(--mono);letter-spacing:.12em;text-transform:uppercase}
+.topline span:last-child{color:#b8b7ad}
+.nav{height:76px;padding:0 4.2vw;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);background:var(--paper);position:relative;z-index:5}
+.brand{font:500 17px var(--mono);letter-spacing:-.08em}.brand i{font-style:normal;color:var(--red)}
+.navright{display:flex;align-items:center;gap:26px}
+.navlinks{display:flex;gap:28px;align-items:center;font:10px var(--mono);letter-spacing:.08em;text-transform:uppercase}
+.navlinks a{color:var(--muted);transition:color .2s}.navlinks a:hover{color:var(--red)}
+.theme-toggle{border:1px solid var(--line);background:transparent;color:var(--ink);padding:9px 12px;font:9px var(--mono);letter-spacing:.08em;text-transform:uppercase;border-radius:2px;white-space:nowrap}
+.theme-toggle:hover{border-color:var(--red);color:var(--red)}
+.hero{min-height:590px;background:var(--paper);display:grid;grid-template-columns:1.06fr .94fr;position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+.hero-copy{padding:clamp(54px,8vw,112px) 4.2vw 58px;position:relative;z-index:2;display:flex;flex-direction:column;justify-content:space-between}
+.eyebrow{display:flex;align-items:center;gap:12px;font:9px var(--mono);letter-spacing:.15em;text-transform:uppercase;color:var(--red)}
+.eyebrow:before{content:"";width:28px;height:1px;background:var(--red)}
+h1{font:400 clamp(58px,8.1vw,112px)/.94 var(--serif);letter-spacing:-.065em;margin:50px 0 26px;max-width:740px}
+h1 em{font-weight:400;color:var(--red)}
+.dek{max-width:470px;font:15px/1.75 var(--sans);color:var(--muted);margin:0}
+.hero-bottom{display:flex;align-items:end;justify-content:space-between;margin-top:50px;gap:20px}
+.meta{display:flex;gap:18px;flex-wrap:wrap;font:9px var(--mono);letter-spacing:.08em;color:var(--muted);text-transform:uppercase}
+.scroll-cue{font:9px var(--mono);letter-spacing:.1em;color:var(--red);white-space:nowrap}
+.hero-art{position:relative;min-height:590px;background:#d8d8c8;overflow:hidden;isolation:isolate}
+:root[data-theme=dark] .hero-art{background:#30372f;filter:saturate(.8) brightness(.88)}
+.art-grain{position:absolute;inset:0;opacity:.18;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.35'/%3E%3C/svg%3E");mix-blend-mode:multiply;z-index:4;pointer-events:none}
+.orbit{position:absolute;width:min(66vw,680px);aspect-ratio:1;border:1px solid rgba(32,34,31,.35);border-radius:50%;left:50%;top:50%;transform:translate(-50%,-50%);z-index:1;animation:orbit 65s linear infinite}
+.orbit:before,.orbit:after{content:"";position:absolute;border:1px solid rgba(32,34,31,.24);border-radius:50%;inset:10% -7%;transform:rotate(34deg)}
+.orbit:after{inset:23% -14%;transform:rotate(-38deg)}
+.disc{position:absolute;width:54%;aspect-ratio:1;border-radius:50%;left:50%;top:50%;transform:translate(-50%,-50%);background:radial-gradient(circle at 33% 28%,#f2e9cf 0 3%,#d1a78a 14%,#a44c37 42%,#612d29 70%,#252522 100%);box-shadow:inset -35px -40px 70px #24231f66,30px 45px 80px #27251f33;z-index:2;animation:float 7s ease-in-out infinite}
+.disc:before{content:"";position:absolute;inset:15%;border:1px solid #f4dfc488;border-radius:50%;transform:rotate(28deg) scaleX(.68)}
+.disc:after{content:"";position:absolute;inset:29% -12%;border:1px solid #f4dfc477;border-radius:50%;transform:rotate(-42deg)}
+.art-label{position:absolute;z-index:3;font:9px var(--mono);letter-spacing:.13em;text-transform:uppercase;color:#252822}
+.art-label.one{top:11%;left:10%}.art-label.two{bottom:11%;right:9%;text-align:right}
+.art-index{position:absolute;right:9%;top:10%;font:clamp(58px,10vw,130px)/1 var(--serif);color:#252822;opacity:.78;letter-spacing:-.08em}
+.cross{position:absolute;width:22px;height:22px;left:16%;bottom:18%;z-index:3}
+.cross:before,.cross:after{content:"";position:absolute;background:#a44c37}
+.cross:before{height:1px;width:22px;top:10px}.cross:after{width:1px;height:22px;left:10px}
+.ticker{background:var(--red);color:#f5f0e8;overflow:hidden;white-space:nowrap;padding:12px 0;font:9px var(--mono);letter-spacing:.14em;text-transform:uppercase}
+.ticker span{display:inline-block;padding-left:25px;animation:tickerTravel 28s linear infinite}
+@keyframes tickerTravel{from{transform:translateX(0)}to{transform:translateX(-45%)}}
+@keyframes orbit{from{transform:translate(-50%,-50%) rotate(0)}to{transform:translate(-50%,-50%) rotate(360deg)}}
+@keyframes float{0%,100%{translate:0 0}50%{translate:0 -13px}}
+.section-intro{padding:78px 4.2vw 34px;display:grid;grid-template-columns:1fr 2fr;gap:35px;align-items:start;scroll-margin-top:18px}
+.section-label{font:9px var(--mono);letter-spacing:.15em;text-transform:uppercase;color:var(--red);padding-top:10px}
+.section-intro h2{font:400 clamp(32px,4.8vw,64px)/1.02 var(--serif);letter-spacing:-.045em;margin:0;max-width:780px}
+.section-intro p{font:13px/1.7 var(--sans);color:var(--muted);max-width:600px;margin:18px 0 0}
+.brief{padding:28px 4.2vw 54px;display:grid;grid-template-columns:1fr 2fr;gap:35px;border-bottom:1px solid var(--line)}
+.brief h2{font:400 30px var(--serif);margin:0;letter-spacing:-.035em}
+.brief-copy{font:14px/1.85 var(--sans);max-width:760px}
+.brief-copy p{margin:0 0 12px}
+.takeaways{padding:50px 4.2vw 72px;background:var(--paper);display:grid;grid-template-columns:1fr 2fr;gap:35px;border-bottom:1px solid var(--line)}
+.takeaways h2{font:400 30px var(--serif);margin:0}
+.takeaways ol{margin:0;padding-left:20px;max-width:760px}
+.takeaways li{font:13px/1.8 var(--sans);padding:0 0 12px 8px}
+.articles{padding:22px 4.2vw 84px;max-width:1500px;margin:auto}
+.articles-head{display:flex;justify-content:space-between;align-items:end;border-bottom:1px solid var(--line);padding:0 0 18px;margin:0 0 10px}
+.articles-head h2{font:400 36px var(--serif);letter-spacing:-.04em;margin:0}
+.articles-head span{font:9px var(--mono);letter-spacing:.12em;color:var(--muted);text-transform:uppercase}
+.article{border-bottom:1px solid var(--line);background:transparent}
+.article summary{list-style:none;display:grid;grid-template-columns:52px 100px 1fr 38px;align-items:center;gap:16px;padding:23px 12px;cursor:pointer}
+.article summary::-webkit-details-marker{display:none}
+.article-no{font:18px var(--serif);color:var(--red)}
+.article-kind{font:9px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.article-title{font:400 clamp(20px,2.4vw,29px)/1.2 var(--serif);letter-spacing:-.025em}
+.plus{width:32px;height:32px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;color:var(--red);font:18px var(--sans);transition:transform .25s,background .25s,color .25s}
+.article[open] summary .plus{transform:rotate(45deg);background:var(--red);color:#fff;border-color:var(--red)}
+.article-body{padding:4px 8% 30px 178px;animation:fadeUp .3s ease both}
+.article-body ul{margin:0;padding-left:19px}
+.article-body li{font:14px/1.85 var(--sans);padding:0 0 14px 4px}
+.article-body p{font:14px/1.85 var(--sans);margin:0}
+.article-body a,.pepites a{color:var(--red);text-decoration:underline;text-decoration-color:color-mix(in srgb,var(--red),transparent 45%);text-underline-offset:3px}
+.article-body a:hover,.pepites a:hover{text-decoration-thickness:2px}
+.pepites{padding:62px 4.2vw 78px;background:var(--paper);border-top:1px solid var(--line);display:grid;grid-template-columns:1fr 2fr;gap:35px}
+.pepites h2{font:400 32px var(--serif);margin:0}
+.pepite-list{display:grid;gap:13px}
+.pepite-list p{font:13px/1.8 var(--sans);margin:0}
+.source{padding:26px 4.2vw;display:flex;justify-content:space-between;align-items:center;gap:18px;border-top:1px solid var(--line);font:10px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.source a{color:var(--red)}
+.footer{background:var(--ink);color:#e9e6df;padding:30px 4.2vw;display:flex;justify-content:space-between;align-items:center;font:9px var(--mono);letter-spacing:.12em;text-transform:uppercase}
+.footer span:last-child{color:#aaa99f}
+.progress{position:fixed;left:0;top:0;height:2px;width:0;background:var(--red);z-index:20}
+@keyframes fadeUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@media(max-width:760px){
+.topline{padding:0 18px;font-size:8px}.nav{height:62px;padding:0 20px}.navlinks{display:none}.navright{gap:12px}.theme-toggle{padding:8px 9px;font-size:8px}
+.hero{display:flex;flex-direction:column;min-height:0}.hero-copy{padding:43px 22px 30px;min-height:390px}
+h1{font-size:clamp(55px,15vw,76px);margin:46px 0 22px;max-width:560px}.dek{font-size:14px}
+.hero-bottom{margin-top:36px;align-items:start;flex-direction:column}.meta{gap:9px 14px;font-size:8px}.scroll-cue{display:none}
+.hero-art{min-height:340px}.orbit{width:88vw}.disc{width:55%}.art-index{font-size:76px}.art-label{font-size:8px}
+.ticker{font-size:8px}.section-intro{padding:58px 22px 26px;display:block}.section-label{margin-bottom:22px}.section-intro h2{font-size:42px}.section-intro p{font-size:13px;margin-top:14px}
+.brief,.takeaways,.pepites{padding:36px 22px;display:block}.brief h2,.takeaways h2,.pepites h2{margin-bottom:18px}.brief-copy{font-size:13px}
+.articles{padding:16px 14px 58px}.articles-head{padding:0 8px 14px}.articles-head h2{font-size:30px}.articles-head span{font-size:8px}
+.article summary{grid-template-columns:36px 1fr 32px;gap:8px;padding:19px 7px}.article-kind{grid-column:2;grid-row:1;font-size:8px}.article-title{grid-column:2;grid-row:2;font-size:23px}.article-no{grid-column:1;grid-row:1/3}.plus{grid-column:3;grid-row:1/3;width:29px;height:29px}
+.article-body{padding:2px 12px 24px 51px}.article-body li{font-size:13px;line-height:1.8}
+.source{padding:22px;display:block;line-height:2}.source a{display:inline-block}
+.footer{padding:22px;display:block;line-height:2}.footer span{display:block}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="progress" id="progress"></div>
+<div class="topline"><span>Une veille indépendante, chaque matin</span><span>Paris · 26.11.2026</span></div>
+<header class="nav">
+<a class="brand" href="../" aria-label="NBS — Accueil">NBS<i>®</i></a>
+<div class="navright">
+<nav class="navlinks" aria-label="Navigation principale"><a href="#edition">L’édition</a><a href="#articles">Les articles</a><a href="#pepites">Liens pépites</a></nav>
+<button class="theme-toggle" id="themeToggle" type="button" aria-pressed="false">Mode sombre</button>
+</div>
+</header>
+<main id="edition">
+<section class="hero">
+<div class="hero-copy">
+<div>
+<div class="eyebrow">Jeudi 26 novembre 2026 &nbsp; / &nbsp; Édition 07</div>
+<h1>La fin<br>des <em>patrons.</em></h1>
+<p class="dek">L’IA remet la décision managériale en débat, tandis que créateurs de niche, médias spécialisés et dirigeants à temps partagé illustrent de nouveaux modèles de valeur.</p>
+</div>
+<div class="hero-bottom"><div class="meta"><span>5 min de lecture</span><span>8 articles</span><span>Business</span><span>Tech & culture</span></div><a class="scroll-cue" href="#articles">DÉFILER POUR EXPLORER ↓</a></div>
+</div>
+<div class="hero-art" role="img" aria-label="Composition abstraite NBS, orbites et disque sculptural">
+<div class="art-index">07</div><div class="art-label one">NBS Intelligence<br>Fieldnotes / 2026</div><div class="orbit"></div><div class="disc"></div><div class="cross"></div><div class="art-label two">Business · Culture<br>Technology & signals</div><div class="art-grain"></div>
+</div>
+</section>
+<div class="ticker"><span>IA · CRÉATEURS · MÉDIAS · TRAVAIL · MARQUES &nbsp; ✳ &nbsp; IA · CRÉATEURS · MÉDIAS · TRAVAIL · MARQUES &nbsp; ✳ &nbsp; IA · CRÉATEURS · MÉDIAS · TRAVAIL · MARQUES &nbsp; ✳ &nbsp;</span></div>
+<section class="brief">
+<div class="section-label">00 / En bref</div>
+<div class="brief-copy">
+<p>L’IA pose la question du partage du pouvoir de décision entre dirigeants, salariés et fournisseurs de modèles. En parallèle, les niches créatives deviennent des points d’entrée commerciaux, les médias se repositionnent comme distributeurs de conseil, et le travail dirigeant se fractionne. Les signaux convergent vers une même évolution : la valeur se déplace autant vers la confiance, la spécialisation et l’accès aux compétences que vers les produits eux-mêmes.</p>
+</div>
+</section>
+<section class="section-intro" id="articles"><div class="section-label">01 / Les articles du jour</div><div><h2>La fin des patrons</h2><p>8 articles · Jeudi 26 novembre 2026</p></div></section>
+<section class="articles">
+<div class="articles-head"><h2>Les articles de l’édition</h2><span>01 — 08 / Recopie</span></div>
+<details class="article"><summary><span class="article-no">01</span><span class="article-kind">Article</span><span class="article-title">Et si l’IA devenait notre patron ?</span><span class="plus">+</span></summary><div class="article-body"><ul>
+<li><strong>Que se passe-t-il si IA prenait de meilleures décisions que vous ?</strong> Elle conduit mieux, organise mieux votre entreprise, repère mieux les maladies… À quel moment lui laissez-vous décider à votre place ?</li>
+<li><strong>Eh bien, les boss de l’IA commencent à se disputer là-dessus :</strong> Certains salariés d’Anthropic pensent <a href="https://www.axios.com/2026/11/25/anthropic-ai-human-control-debate-free-will" target="_blank" rel="noopener">qu’il faut la laisser décider</a> (à notre place). Le raisonnement est le suivant : Si l’IA conduit mieux, conduire soi-même paraît irresponsable n’est-ce pas ? Quid pour la direction d’entreprise ?</li>
+<li><strong>D’autres défendent l’inverse :</strong> <a href="https://x.com/alexandr_wang/status/2124636606959345776" target="_blank" rel="noopener"><strong>Alexan</strong></a><a href="https://x.com/alexandr_wang/status/2124636606959345776" target="_blank" rel="noopener">dr Wang, qui dirige l’IA chez Meta</a>, refuse qu’on remette la société aux machines. Sam Altman défend aussi le dernier mot humain.</li>
+<li>Plusieurs réflexions ici :</li>
+<li>1) <strong>Qui décide de ce que veut dire “faire mieux” ?</strong> Une IA pourrait recommander de supprimer des emplois afin d’augmenter les bénéfices. Mais le patron peut préférer gagner moins et conserver son équipe. <strong>Qui règle les priorités de l’IA ?</strong> Le dirigeant ? Le fournisseur du logiciel ? L’État ?</li>
+<li><strong>2) On fait semblant de ne pas voir à quel point certains ont déjà délégué leurs décisions à l’IA depuis belle lurette :</strong> “Est-ce que je dois quitter mon conjoint ?”, “Comment répondre à mon associé ?”…</li>
+</ul></div></details>
+<details class="article"><summary><span class="article-no">02</span><span class="article-kind">Article</span><span class="article-title">Des comptes Instagram bizarres décollent</span><span class="plus">+</span></summary><div class="article-body"><ul>
+<li><strong>Fabriquer des jeans avec des pâtes… et se faire payer par Abercrombie.</strong> C’est ce que fait <a href="https://www.instagram.com/sibatable/" target="_blank" rel="noopener">Sibatable</a>, une créatrice spécialisée dans la nourriture mignonne, suivie par 835 000 personnes. Et elle n’est pas seule : <a href="https://www.instagram.com/etn.co_mam/" target="_blank" rel="noopener">@etn.co_mam</a> réunit 255 000 abonnés autour de ses créations culinaires un peu bizarres.</li>
+<li><strong>Autre niche :</strong> les <a href="https://trends.google.com/trends/explore?date=today%205-y&amp;q=custom%20ceramics" target="_blank" rel="noopener">céramiques personnalisées</a>. <a href="https://www.instagram.com/camkobo/" target="_blank" rel="noopener">Camkobo</a> compte 310 000 abonnés, <a href="https://www.instagram.com/goobsceramics/" target="_blank" rel="noopener">Goobs Ceramics</a> 47 000. Cette dernière vend des pièces entre 100 et 200 $…</li>
+<li><strong>Et encore plus nichés :</strong><ul><li><a href="https://www.instagram.com/blackforager/" target="_blank" rel="noopener"><strong>Blackforager</strong></a> partage des conseils de <a href="https://trends.google.com/trends/explore?date=today%205-y&amp;q=foraging" target="_blank" rel="noopener">cueillette</a> : 1,7 million d’abonnés.</li></ul></li>
+<li><a href="https://www.instagram.com/jamescookartwork/" target="_blank" rel="noopener">James Cook</a> dessine à la machine à écrire : un million d’abonnés.</li>
+<li><a href="https://www.instagram.com/specializedgerman/" target="_blank" rel="noopener"><strong>Specialized German</strong></a> montre des pièces automobiles Porsche et BMW : 88 000 abonnés.</li>
+<li><strong>Ça devrait donner des idées à des entreprises qui pensent n’avoir “rien à raconter”.</strong> Une casse automobile, un atelier ou un artisan peuvent avoir un spectacle quotidien sous les yeux sans le voir. Le démontage, la transformation, le geste précis…</li>
+</ul></div></details>
+<details class="article"><summary><span class="article-no">03</span><span class="article-kind">Article</span><span class="article-title">Le retour des media startups</span><span class="plus">+</span></summary><div class="article-body"><ul>
+<li><strong>Avec Vice ou Quibi, qui avaient levé des fortunes avant de faire faillite ou de fermer</strong>, on aurait pu penser les investisseurs vaccinés.</li>
+<li><strong>Mais Every, un média américain qui explique aux professionnels comment utiliser l’IA, vient de lever 17,5 M$</strong>, pour une <a href="https://every.to/" target="_blank" rel="noopener">valorisation de 110 M$</a>. Créé en 2020, il compte 130 000 inscrits gratuits, près de 10 000 abonnés payants et 35 salariés.</li>
+<li><strong>Pourquoi on en parle ?</strong></li>
+<li><strong>1) Les médias sont sous-valorisés par le marché.</strong> On les évalue sur leur business actuel : abonnements, sponsoring, événements… Mais si un média lance une activité de conseil digne des grands cabinets, quelle valorisation lui donner ? Celle du média ou celle du cabinet ?</li>
+<li><strong>2) Every se lance sur un marché ultra bouché : le conseil en IA.</strong> Mais il possède un avantage énorme : la distribution et la confiance (et ce modèle peut se dupliquer dans plein de niches…).</li>
+</ul></div></details>
+<details class="article"><summary><span class="article-no">04</span><span class="article-kind">Article</span><span class="article-title">Patron à louer</span><span class="plus">+</span></summary><div class="article-body"><ul>
+<li><strong>Après les devs et les graphistes, les nouveaux freelances sont… les patrons.</strong> Aux US, on recrute <a href="https://www.hr-brew.com/stories/is-the-future-of-work-fractional" target="_blank" rel="noopener">des dirigeants “fractionals”</a> (“fractionnés” en VF) : des directeurs techniques (CTO), marketing (CMO) ou même des CEO qui bossent dans une entreprise un ou deux jours par semaine seulement.</li>
+<li><strong>Le phénomène n’est pas nouveau, mais accélère à fond</strong> : +5000% de recherche pour “fractional CEO” sur Google depuis 2022 et +380% du nombre d’offres d’emploi “fractionals” depuis 2021. Sur la plateforme spécialisée <a href="https://www.fractionaljobs.io/the-fractional-work-report#summary" target="_blank" rel="noopener">Fractional Jobs</a>, les offres d’emploi ont fait +149% en une seule année.</li>
+<li><strong>Pourquoi ça explose ?</strong> Réponse en deux mots : moins cher. Un CFO à temps partagé coûte 50% de moins qu’un temps plein.</li>
+<li><strong>L’IA va accélérer le phénomène</strong> : les agents gèrent déjà l'analyse de données brutes et le reporting. Donc plus besoin d’avoir des cadres 24h/24, ils auront juste à venir de temps en temps pour définir la stratégie et encadrer les juniors.</li>
+<li><strong>Et ça pourrait même sauver l’économie française</strong> : <a href="https://pilot-groupe.com/etude-temps-partage-pilot-groupe-cadremploi/" target="_blank" rel="noopener">62 % des dirigeants de PME</a> ont déjà abandonné un projet à cause d’un manque de compétences en interne. Là, grâce au système “fractional”, une petite boîte peut s’offrir plus facilement un CFO expérimenté, et <a href="https://www.cfogrowthadvisors.com/post/nd-for-fractional-cfo-services-2026" target="_blank" rel="noopener">améliorer de 35%</a> ses décisions financières.</li>
+</ul></div></details>
+<details class="article"><summary><span class="article-no">05</span><span class="article-kind">Article</span><span class="article-title">Après les barres protéinées… les vêtements</span><span class="plus">+</span></summary><div class="article-body"><ul>
+<li><strong>Vous connaissez David ?</strong> Cette marque américaine s’est fait connaître avec une promesse très précise : <a href="https://davidprotein.com/products/chocolate-chip-cookie-dough" target="_blank" rel="noopener"><strong>28 g de protéines pour 150 calories et zéro sucre</strong></a>. Depuis, elle vend aussi des glaces, des boissons protéinées… et même du cabillaud. Oui, du poisson.</li>
+<li><strong>Ça cartonne :</strong> lancée en septembre 2024, David revendique 35 000 points de vente et sa maison mère annonçait alors 250 M$ levés et un objectif dépassant <a href="https://www.prnewswire.com/news-releases/medici-brands-raises-250-million-in-series-b-funding-302867137.html" target="_blank" rel="noopener">300 M$ de revenus en 2026</a>.</li>
+<li><strong>La prochaine étape ? Vous habiller.</strong> Le groupe prépare <a href="https://www.nosh.com/news/2026/david-protein-extends-into-clothing-with-diet-and-exercise-brand" target="_blank" rel="noopener"><strong>Diet &amp; Exercise</strong></a>, une marque de vêtements développée par Charlotte Coquelin, mannequin et épouse du fondateur Peter Rahal.</li>
+<li>Mais quel rapport entre une barre protéinée et votre garde-robe ?</li>
+<li><strong>Ils cherchent à vendre une appartenance : le “healthy” devient un marqueur de statut social.</strong> Plus d’1/3 des consommateurs considèrent désormais le bien-être comme central dans leur identité… <strong>Et les vêtements rendent cette appartenance visible toute la journée.</strong> Votre entourage ne connaît pas forcément vos apports en protéines. Une tenue “Diet &amp; Exercise” affiche immédiatement le groupe auquel vous voulez appartenir.</li>
+</ul></div></details>
+<details class="article signal"><summary><span class="article-no">06</span><span class="article-kind">Signal</span><span class="article-title">Les Français veulent entendre davantage les patrons</span><span class="plus">+</span></summary><div class="article-body"><p>🇫🇷 <strong>Les Français veulent entendre davantage les patrons.</strong> <strong>79 %</strong> souhaitent qu’ils soient plus présents dans les médias et <strong>58 %</strong> estiment qu’un entrepreneur ferait un bon président, selon un <a href="https://www.fondapol.org/dans-les-medias/sondage-exclusif-58-des-francais-pensent-quun-patron-ferait-un-bon-president-de-la-republique/" target="_blank" rel="noopener">sondage OpinionWay publié début 2026</a>.</p></div></details>
+<details class="article signal"><summary><span class="article-no">07</span><span class="article-kind">Signal</span><span class="article-title">De retour chez Nvidia, Jensen Huang ne veut toujours pas préparer sa succession</span><span class="plus">+</span></summary><div class="article-body"><p>🟢 <strong>De retour chez Nvidia, Jensen Huang ne veut toujours pas préparer sa succession.</strong> Lors d’une réunion interne, il <a href="https://www.wired.com/story/jensen-huang-apologizes-to-nvidia-employees-in-first-all-hands-since-his-return/" target="_blank" rel="noopener">aurait jugé qu’un plan formel créerait une hiérarchie inutile</a>. Le dirigeant a aussi présenté ses excuses pour avoir enfreint le code de conduite et déclaré suivre une thérapie. En Bourse, Nvidia a reculé d’environ 6 % mardi, après son rebond de 31 % lundi.</p></div></details>
+<details class="article signal"><summary><span class="article-no">08</span><span class="article-kind">Signal</span><span class="article-title">Bruxelles veut mobiliser 50 milliards d’euros pour la souveraineté technologique</span><span class="plus">+</span></summary><div class="article-body"><p>🇪🇺 <strong>Bruxelles veut mobiliser 50 milliards d’euros pour la souveraineté technologique.</strong> La Commission européenne propose un <a href="https://fr.euronews.com/2026/11/25/lue-devoile-un-plan-pour-lere-quantique-avec-jusqua-50-milliards-dinvestissements" target="_blank" rel="noopener">fonds réunissant capitaux publics et privés</a> pour investir notamment dans l’IA et le quantique. Un objectif encore à financer, qui représente 10 % des 500 milliards d’euros d’investissements jugés nécessaires par Ursula von der Leyen pour développer et adopter l’IA en Europe.</p></div></details>
+</section>
+<section class="takeaways">
+<div class="section-label">02 / À retenir</div>
+<div><h2>À retenir</h2><ol>
+<li>L’IA peut assister une décision, mais les critères de « meilleure » décision restent un choix humain et politique.</li>
+<li>Des comptes très spécialisés peuvent réunir des audiences importantes et attirer des marques ou des acheteurs.</li>
+<li>Le modèle fractional abaisse le coût d’accès à des compétences dirigeantes ; les chiffres de croissance cités restent ceux rapportés par la newsletter.</li>
+<li>Les marques peuvent étendre leur univers commercial en vendant aussi une identité et une appartenance.</li>
+</ol></div>
+</section>
+<section class="pepites" id="pepites">
+<div class="section-label">03 / Liens pépites</div>
+<div><h2>Liens pépites du jour</h2><div class="pepite-list">
+<p>🎤 Nouveau business <a href="https://youtu.be/UgZyFrGQSzs" target="_blank" rel="noopener">qui décolle</a>.</p>
+<p>🧠 Super documentaire de l’ami Carlos Diaz : <a href="https://youtu.be/GrUeaIL_D4c?si=8a9tE9CKcugUlCdO" target="_blank" rel="noopener">Et si la bulle de l’IA était une bonne nouvelle</a> ?</p>
+<p>💰 MCFLY ET CARLITO : Le duo aurait généré <a href="https://x.com/LaTwitchance/status/2125362597100941700?a=YezAlcJ6yAt2MCX2oTU&amp;s=20" target="_blank" rel="noopener">213 000 € en seulement 28 jours</a>, sans même compter les placements de produits et les opérations commerciales.</p>
+<p>😁 L’Europe compte désormais <a href="https://x.com/SebJohnsonUK/status/2125505015049490869?a=Re2qY-0JKjQ3vyGWfbs&amp;s=20" target="_blank" rel="noopener">plus de fondateurs de start-up tech que les États-Unis</a>.</p>
+<p>📈 Près de 24% des Thiel Fellows <a href="https://x.com/defyneric/status/2125146548514193421?a=1vXtTH2h9aksIVeVmUk&amp;s=20" target="_blank" rel="noopener">finissent par créer une entreprise valant un milliard de dollars</a>.</p>
+<p>📉 Les taux de natalité en Afrique <a href="https://x.com/MagellanQuest/status/2125213661635527048?a=0l4e_82Cpac_S6ACYy4&amp;s=20" target="_blank" rel="noopener">diminuent bien plus rapidement que prévu</a>.</p>
+</div></div>
+</section>
+<div class="source"><span>Édition source · Luc Allain, The Next Big Sh*t</span><a href="https://www.the-nbs.fr/p/la-testosterone-explose-1" target="_blank" rel="noopener">La fin des patrons ↗</a></div>
+</main>
+<footer class="footer"><span>NBS® — Lecture du matin</span><span>Une lecture claire du monde qui change.</span><span>26 / 11 / 2026</span></footer>
+<script>
+const root=document.documentElement;
+const toggle=document.getElementById('themeToggle');
+function applyTheme(theme){root.dataset.theme=theme;const dark=theme==='dark';toggle.textContent=dark?'Mode clair':'Mode sombre';toggle.setAttribute('aria-pressed',String(dark));document.querySelector('meta[name="theme-color"]').content=dark?'#171916':'#e9e6df'}
+applyTheme(root.dataset.theme||'light');
+toggle.addEventListener('click',()=>{const next=root.dataset.theme==='dark'?'light':'dark';applyTheme(next);try{localStorage.setItem('nbs-theme',next)}catch(e){}});
+const progress=document.getElementById('progress');
+function updateProgress(){const max=document.documentElement.scrollHeight-window.innerHeight;progress.style.width=(max>0?window.scrollY/max*100:0)+'%'}
+window.addEventListener('scroll',updateProgress,{passive:true});updateProgress();
+</script>
+</body>
+</html>
