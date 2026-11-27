@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#e9e6df">
+<meta name="description" content="Les faux films cartonnent — NBS, édition du vendredi 27 novembre 2026.">
+<title>Les faux films cartonnent — NBS®</title>
+<script>
+(function(){try{var saved=localStorage.getItem('nbs-theme');var theme=saved||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.dataset.theme=theme;}catch(e){document.documentElement.dataset.theme='light';}})();
+</script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap');
+:root{color-scheme:light;--bg:#e9e6df;--paper:#f5f3ee;--ink:#20221f;--muted:#73756e;--line:#d5d1c8;--red:#a44c37;--green:#536c5d;--acid:#d7dc9b;--serif:'Playfair Display',Georgia,serif;--sans:'DM Sans',-apple-system,sans-serif;--mono:'DM Mono',monospace}
+:root[data-theme=dark]{color-scheme:dark;--bg:#171916;--paper:#20231f;--ink:#eeeae1;--muted:#a4a69c;--line:#3a3e37;--red:#d17b62;--green:#8ba18e;--acid:#d7dc9b}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased;transition:background .25s,color .25s}
+a{color:inherit;text-decoration:none}
+a:hover{color:var(--red)}
+button{font:inherit;cursor:pointer}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:1px solid var(--red);outline-offset:4px}
+::selection{background:#ded8c9;color:#20221f}
+.topline{height:34px;padding:0 4.2vw;background:var(--ink);color:#e9e6df;display:flex;align-items:center;justify-content:space-between;font:9px var(--mono);letter-spacing:.12em;text-transform:uppercase}
+.topline span:last-child{color:#b8b7ad}
+.nav{height:76px;padding:0 4.2vw;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);background:var(--paper);position:relative;z-index:5}
+.brand{font:500 17px var(--mono);letter-spacing:-.08em}.brand i{font-style:normal;color:var(--red)}
+.navright{display:flex;align-items:center;gap:26px}
+.navlinks{display:flex;gap:28px;align-items:center;font:10px var(--mono);letter-spacing:.08em;text-transform:uppercase}
+.navlinks a{color:var(--muted);transition:color .2s}.navlinks a:hover{color:var(--red)}
+.theme-toggle{border:1px solid var(--line);background:transparent;color:var(--ink);padding:9px 12px;font:9px var(--mono);letter-spacing:.08em;text-transform:uppercase;border-radius:2px;white-space:nowrap}
+.theme-toggle:hover{border-color:var(--red);color:var(--red)}
+.hero{min-height:590px;background:var(--paper);display:grid;grid-template-columns:1.06fr .94fr;position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+.hero-copy{padding:clamp(54px,8vw,112px) 4.2vw 58px;position:relative;z-index:2;display:flex;flex-direction:column;justify-content:space-between}
+.eyebrow{display:flex;align-items:center;gap:12px;font:9px var(--mono);letter-spacing:.15em;text-transform:uppercase;color:var(--red)}
+.eyebrow:before{content:"";width:28px;height:1px;background:var(--red)}
+h1{font:400 clamp(58px,8.1vw,112px)/.94 var(--serif);letter-spacing:-.065em;margin:50px 0 26px;max-width:740px}
+h1 em{font-weight:400;color:var(--red)}
+.dek{max-width:470px;font:15px/1.75 var(--sans);color:var(--muted);margin:0}
+.hero-bottom{display:flex;align-items:end;justify-content:space-between;margin-top:50px;gap:20px}
+.meta{display:flex;gap:18px;flex-wrap:wrap;font:9px var(--mono);letter-spacing:.08em;color:var(--muted);text-transform:uppercase}
+.scroll-cue{font:9px var(--mono);letter-spacing:.1em;color:var(--red);white-space:nowrap}
+.hero-art{position:relative;min-height:590px;background:#d8d8c8;overflow:hidden;isolation:isolate}
+:root[data-theme=dark] .hero-art{background:#30372f;filter:saturate(.8) brightness(.88)}
+.art-grain{position:absolute;inset:0;opacity:.18;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.35'/%3E%3C/svg%3E");mix-blend-mode:multiply;z-index:4;pointer-events:none}
+.orbit{position:absolute;width:min(66vw,680px);aspect-ratio:1;border:1px solid rgba(32,34,31,.35);border-radius:50%;left:50%;top:50%;transform:translate(-50%,-50%);z-index:1;animation:orbit 65s linear infinite}
+.orbit:before,.orbit:after{content:"";position:absolute;border:1px solid rgba(32,34,31,.24);border-radius:50%;inset:10% -7%;transform:rotate(34deg)}
+.orbit:after{inset:23% -14%;transform:rotate(-38deg)}
+.disc{position:absolute;width:54%;aspect-ratio:1;border-radius:50%;left:50%;top:50%;transform:translate(-50%,-50%);background:radial-gradient(circle at 33% 28%,#f2e9cf 0 3%,#d1a78a 14%,#a44c37 42%,#612d29 70%,#252522 100%);box-shadow:inset -35px -40px 70px #24231f66,30px 45px 80px #27251f33;z-index:2;animation:float 7s ease-in-out infinite}
+.disc:before{content:"";position:absolute;inset:15%;border:1px solid #f4dfc488;border-radius:50%;transform:rotate(28deg) scaleX(.68)}
+.disc:after{content:"";position:absolute;inset:29% -12%;border:1px solid #f4dfc477;border-radius:50%;transform:rotate(-42deg)}
+.art-label{position:absolute;z-index:3;font:9px var(--mono);letter-spacing:.13em;text-transform:uppercase;color:#252822}
+.art-label.one{top:11%;left:10%}.art-label.two{bottom:11%;right:9%;text-align:right}
+.art-index{position:absolute;right:9%;top:10%;font:clamp(58px,10vw,130px)/1 var(--serif);color:#252822;opacity:.78;letter-spacing:-.08em}
+.cross{position:absolute;width:22px;height:22px;left:16%;bottom:18%;z-index:3}
+.cross:before,.cross:after{content:"";position:absolute;background:#a44c37}
+.cross:before{height:1px;width:22px;top:10px}.cross:after{width:1px;height:22px;left:10px}
+.ticker{background:var(--red);color:#f5f0e8;overflow:hidden;white-space:nowrap;padding:12px 0;font:9px var(--mono);letter-spacing:.14em;text-transform:uppercase}
+.ticker span{display:inline-block;padding-left:25px;animation:tickerTravel 28s linear infinite}
+@keyframes tickerTravel{from{transform:translateX(0)}to{transform:translateX(-45%)}}
+@keyframes orbit{from{transform:translate(-50%,-50%) rotate(0)}to{transform:translate(-50%,-50%) rotate(360deg)}}
+@keyframes float{0%,100%{translate:0 0}50%{translate:0 -13px}}
+.section-intro{padding:78px 4.2vw 34px;display:grid;grid-template-columns:1fr 2fr;gap:35px;align-items:start;scroll-margin-top:18px}
+.section-label{font:9px var(--mono);letter-spacing:.15em;text-transform:uppercase;color:var(--red);padding-top:10px}
+.section-intro h2{font:400 clamp(32px,4.8vw,64px)/1.02 var(--serif);letter-spacing:-.045em;margin:0;max-width:780px}
+.section-intro p{font:13px/1.7 var(--sans);color:var(--muted);max-width:600px;margin:18px 0 0}
+.brief{padding:28px 4.2vw 54px;display:grid;grid-template-columns:1fr 2fr;gap:35px;border-bottom:1px solid var(--line)}
+.brief h2{font:400 30px var(--serif);margin:0;letter-spacing:-.035em}
+.brief-copy{font:14px/1.85 var(--sans);max-width:760px}
+.brief-copy p{margin:0 0 12px}
+.takeaways{padding:50px 4.2vw 72px;background:var(--paper);display:grid;grid-template-columns:1fr 2fr;gap:35px;border-bottom:1px solid var(--line)}
+.takeaways h2{font:400 30px var(--serif);margin:0}
+.takeaways ol{margin:0;padding-left:20px;max-width:760px}
+.takeaways li{font:13px/1.8 var(--sans);padding:0 0 12px 8px}
+.articles{padding:22px 4.2vw 84px;max-width:1500px;margin:auto}
+.articles-head{display:flex;justify-content:space-between;align-items:end;border-bottom:1px solid var(--line);padding:0 0 18px;margin:0 0 10px}
+.articles-head h2{font:400 36px var(--serif);letter-spacing:-.04em;margin:0}
+.articles-head span{font:9px var(--mono);letter-spacing:.12em;color:var(--muted);text-transform:uppercase}
+.article{border-bottom:1px solid var(--line);background:transparent}
+.article summary{list-style:none;display:grid;grid-template-columns:52px 100px 1fr 38px;align-items:center;gap:16px;padding:23px 12px;cursor:pointer}
+.article summary::-webkit-details-marker{display:none}
+.article-no{font:18px var(--serif);color:var(--red)}
+.article-kind{font:9px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.article-title{font:400 clamp(20px,2.4vw,29px)/1.2 var(--serif);letter-spacing:-.025em}
+.plus{width:32px;height:32px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;color:var(--red);font:18px var(--sans);transition:transform .25s,background .25s,color .25s}
+.article[open] summary .plus{transform:rotate(45deg);background:var(--red);color:#fff;border-color:var(--red)}
+.article-body{padding:4px 8% 30px 178px;animation:fadeUp .3s ease both}
+.article-body ul{margin:0;padding-left:19px}
+.article-body li{font:14px/1.85 var(--sans);padding:0 0 14px 4px}
+.article-body p{font:14px/1.85 var(--sans);margin:0}
+.article-body a,.pepites a{color:var(--red);text-decoration:underline;text-decoration-color:color-mix(in srgb,var(--red),transparent 45%);text-underline-offset:3px}
+.article-body a:hover,.pepites a:hover{text-decoration-thickness:2px}
+.pepites{padding:62px 4.2vw 78px;background:var(--paper);border-top:1px solid var(--line);display:grid;grid-template-columns:1fr 2fr;gap:35px}
+.pepites h2{font:400 32px var(--serif);margin:0}
+.pepite-list{display:grid;gap:13px}
+.pepite-list p{font:13px/1.8 var(--sans);margin:0}
+.source{padding:26px 4.2vw;display:flex;justify-content:space-between;align-items:center;gap:18px;border-top:1px solid var(--line);font:10px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.source a{color:var(--red)}
+.footer{background:var(--ink);color:#e9e6df;padding:30px 4.2vw;display:flex;justify-content:space-between;align-items:center;font:9px var(--mono);letter-spacing:.12em;text-transform:uppercase}
+.footer span:last-child{color:#aaa99f}
+.progress{position:fixed;left:0;top:0;height:2px;width:0;background:var(--red);z-index:20}
+@keyframes fadeUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@media(max-width:760px){
+.topline{padding:0 18px;font-size:8px}.nav{height:62px;padding:0 20px}.navlinks{display:none}.navright{gap:12px}.theme-toggle{padding:8px 9px;font-size:8px}
+.hero{display:flex;flex-direction:column;min-height:0}.hero-copy{padding:43px 22px 30px;min-height:390px}
+h1{font-size:clamp(55px,15vw,76px);margin:46px 0 22px;max-width:560px}.dek{font-size:14px}
+.hero-bottom{margin-top:36px;align-items:start;flex-direction:column}.meta{gap:9px 14px;font-size:8px}.scroll-cue{display:none}
+.hero-art{min-height:340px}.orbit{width:88vw}.disc{width:55%}.art-index{font-size:76px}.art-label{font-size:8px}
+.ticker{font-size:8px}.section-intro{padding:58px 22px 26px;display:block}.section-label{margin-bottom:22px}.section-intro h2{font-size:42px}.section-intro p{font-size:13px;margin-top:14px}
+.brief,.takeaways,.pepites{padding:36px 22px;display:block}.brief h2,.takeaways h2,.pepites h2{margin-bottom:18px}.brief-copy{font-size:13px}
+.articles{padding:16px 14px 58px}.articles-head{padding:0 8px 14px}.articles-head h2{font-size:30px}.articles-head span{font-size:8px}
+.article summary{grid-template-columns:36px 1fr 32px;gap:8px;padding:19px 7px}.article-kind{grid-column:2;grid-row:1;font-size:8px}.article-title{grid-column:2;grid-row:2;font-size:23px}.article-no{grid-column:1;grid-row:1/3}.plus{grid-column:3;grid-row:1/3;width:29px;height:29px}
+.article-body{padding:2px 12px 24px 51px}.article-body li{font-size:13px;line-height:1.8}
+.source{padding:22px;display:block;line-height:2}.source a{display:inline-block}
+.footer{padding:22px;display:block;line-height:2}.footer span{display:block}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="progress" id="progress"></div>
+<div class="topline"><span>Une veille indépendante, chaque matin</span><span>Paris · 27.11.2026</span></div>
+<header class="nav">
+<a class="brand" href="../" aria-label="NBS — Accueil">NBS<i>®</i></a>
+<div class="navright">
+<nav class="navlinks" aria-label="Navigation principale"><a href="#edition">L’édition</a><a href="#articles">Les articles</a><a href="#pepites">Liens pépites</a></nav>
+<button class="theme-toggle" id="themeToggle" type="button" aria-pressed="false">Mode sombre</button>
+</div>
+</header>
+<main id="edition">
+<section class="hero">
+<div class="hero-copy">
+<div>
+<div class="eyebrow">Vendredi 27 novembre 2026 &nbsp; / &nbsp; Édition 08</div>
+<h1>Les faux<br>films <em>cartonnent</em></h1>
+</div>
+<div class="hero-bottom"><div class="meta"><span>5 min de lecture</span><span>7 articles</span><span>Business</span><span>Tech & culture</span></div><a class="scroll-cue" href="#articles">DÉFILER POUR EXPLORER ↓</a></div>
+</div>
+<div class="hero-art" role="img" aria-label="Composition abstraite NBS, orbites et disque sculptural">
+<div class="art-index">08</div><div class="art-label one">NBS Intelligence<br>Fieldnotes / 2026</div><div class="orbit"></div><div class="disc"></div><div class="cross"></div><div class="art-label two">Business · Culture<br>Technology & signals</div><div class="art-grain"></div>
+</div>
+</section>
+<div class="ticker"><span>LES FAUX FILMS CARTONNENT &nbsp; ✳ &nbsp; LES FAUX FILMS CARTONNENT &nbsp; ✳ &nbsp; LES FAUX FILMS CARTONNENT &nbsp; ✳ &nbsp;</span></div>
+<section class="brief">
+<div class="section-label">00 / En bref</div>
+<div class="brief-copy"><p>La newsletter rapproche des films opportunistes produits à bas coût, l’essor des pratiques autour de la VO₂ max et la place croissante du compute dans la recherche en IA. Elle suit aussi la circulation des tendances de décoration via TikTok, les indicateurs de l’économie américaine et deux signaux de gouvernance et de politique budgétaire européenne.</p></div>
+</section>
+<section class="takeaways">
+<div class="section-label">02 / À retenir</div>
+<div><h2>À retenir</h2><ol><li>Le mockbuster mise sur la proximité avec un blockbuster, la rapidité de sortie et des coûts de production réduits.</li><li>La VO₂ max fédère des équipements, des méthodes d’entraînement et des outils de suivi.</li><li>Dans la recherche en IA, l’accès au compute devient un enjeu de concentration des moyens et d’attraction des talents.</li><li>TikTok transforme des usages décoratifs précis en tendances commerciales ; les signaux économiques et politiques complètent cette édition.</li></ol></div>
+</section>
+<section class="section-intro" id="articles"><div class="section-label">01 / Les articles du jour</div><div><h2>Les faux films cartonnent</h2><p>7 articles · Vendredi 27 novembre 2026</p></div></section>
+<section class="articles">
+<div class="articles-head"><h2>Les articles de l’édition</h2><span>01 — 07 / Recopie</span></div>
+<details class="article"><summary><span class="article-no">01</span><span class="article-kind">Article</span><span class="article-title">La fausse “Odyssée” rapporte 1M$</span><span class="plus">+</span></summary><div class="article-body"><ul><li><strong>Vous connaissez sûrement “L’Odyssée” de Christopher Nolan…</strong></li><li><strong>Mais probablement pas “L’Odyssée” du studio</strong> <a href="https://www.theasylum.cc/" target="_blank" rel="noopener">The Asylum</a> : sa version cheap qui devrait (quand même) rapporter <a href="https://www.wsj.com/arts-culture/film/odyssey-mockbuster-asylum-christopher-nolan-matt-damon-cc89bc18" target="_blank" rel="noopener">près de 1 M$</a> en location et droits de distribution.</li><li><strong>C’est ce qu’on appelle un “mockbuster”</strong> : un film parodique qui copie, et capitalise sur la popularité, d’un blockbuster.</li><li><strong>Le tout pour 10x moins cher</strong> : “L’Odyssée” de The Asylum a coûté 250 000 $ à produire, soit 99,9% de moins (!) que le film de Nolan. Et il a été tourné en 6 jours contre 91 pour la version hollywoodienne.</li><li><strong>The Asylum a industrialisé la recette</strong>. Le studio produit environ 30 mockbusters par an, avec <a href="https://growjo.com/company/The_Asylum" target="_blank" rel="noopener">un CA estimé à 25 M$</a> (+400% depuis 2009).</li><li><strong>Pourquoi ça cartonne de plus en plus</strong> (alors que c’est vraiment TRÈS cheap) ?<ul><li>1) <strong>Ça surfe sur notre appétit du “tout, tout de suite”</strong> : la version de The Asylum était dispo en VOD dès le 3 juillet. Plein de gens se sont plantés et l’ont louée en pensant regarder le film de Nolan, qui ne sortait que le 17 juillet.</li><li>2) L’explosion de l’IA générative baisse encore les coûts de production.</li><li>3) <strong>Les mockbusters sont tellement nuls qu’ils tombent pile dans la “culture mème” de la gen Z</strong>… et du coup <a href="https://variety.com/2026/film/news/producers-adapt-streaming-fast-channels-mockbusters-1236941543/" target="_blank" rel="noopener">deviennent viraux</a> en dépensant quasi zéro en marketing.</li></ul></li></ul></div></details>
+<details class="article"><summary><span class="article-no">02</span><span class="article-kind">Article</span><span class="article-title">La V02 Max devient vraiment à la mode</span><span class="plus">+</span></summary><div class="article-body"><ul><li><strong>Après les 10 000 pas, voici la VO₂ max :</strong> Elle mesure la quantité maximale d’oxygène que votre corps utilise pendant un effort intense. <strong>Tous les produits et services autour décollent :</strong></li><li><strong>1) Les machines :</strong> Les tendances google explosent pour <a href="https://trends.google.com/trends/explore?date=today%205-y&amp;q=Assault%20bike" target="_blank" rel="noopener"><strong>Assault bikes</strong></a>, vélos à résistance à air, des <a href="https://trends.google.com/trends/explore?date=today%205-y&amp;q=SkiErg" target="_blank" rel="noopener"><strong>SkiErg</strong></a>, des <a href="https://trends.google.com/trends/explore?date=all&amp;q=stair%20climber" target="_blank" rel="noopener">simulateurs d’escaliers</a> et des machines d’escalade verticale…</li><li><strong>2) La méthode d’entrainement :</strong> <a href="https://trends.google.com/trends/explore?date=all&amp;q=Norwegian%204x4" target="_blank" rel="noopener">Norwegian 4×4</a>, Seiler 4×8, intervalles 30/30, entraînement 10-20-30 et <a href="https://trends.google.com/trends/explore?date=all&amp;q=REHIT" target="_blank" rel="noopener">REHIT</a>… Ces termes ne vous évoquent rien ? Il serait temps de vous mettre au cardio alors !</li><li><strong>3) Un suivi de sa progression avec le </strong><a href="https://trends.google.com/trends/explore?q=what%20is%20the%20cooper%20test&amp;date=all" target="_blank" rel="noopener"><strong>test</strong></a> <a href="https://trends.google.com/trends/explore?q=what%20is%20the%20cooper%20test&amp;date=all" target="_blank" rel="noopener"><strong>Coope</strong></a><strong>r</strong> ou le <strong>Luc Léger</strong>, les fameux allers-retours au rythme des “bips”. Car oui, il faut être en mesure de suivre <a href="https://trends.google.com/trends/explore?date=all&amp;q=vo2%20max%20monitor" target="_blank" rel="noopener">l’évolution de sa V02 max</a>… et surtout derrière de la partager sur les réseaux.</li></ul></div></details>
+<details class="article"><summary><span class="article-no">03</span><span class="article-kind">Article</span><span class="article-title">On a un problème : Les labos d’IA prennent la recherche en otage</span><span class="plus">+</span></summary><div class="article-body"><ul><li><strong>Jusqu’ici,</strong> la recherche se partageait entre <a href="https://www.oecd.org/en/data/insights/statistical-releases/2026/03/oecd-overall-rd-growth-stable-government-rd-budgets-decline-and-reorient-towards-defence.html" target="_blank" rel="noopener">universités</a>, organismes publics et entreprises privées…</li><li><strong>Sauf qu’avec l’IA tout change :</strong> Des milliers d’agents explorent des pistes simultanément, confrontent leurs résultats et recommencent sans pause. On se rappelle de la résolution du problème de Navier–Stokes (grâce à 10.000 agents IA).</li><li><strong>Et qui dit IA… dit compute… contrôlé par les big tech :</strong> La résolution du problème de Navier a coûté 130 milliards de tokens (équivalent de plusieurs millions de $).</li><li><strong>Et ça pose 2 problèmes :</strong></li><li><strong>1) On assiste à une concentration massive de la recherche par une poignée d’acteurs…</strong> car les universités deviennent dépendantes de leurs concurrents pour accéder au compute.</li><li><strong>2) Les talents </strong><a href="https://ai100.stanford.edu/reports/2026-report/standing-questions/sq8-how-are-roles-academia-and-industry-evolving" target="_blank" rel="noopener"><strong>quittent la recherche universitaire</strong></a><strong> </strong>pour aller vers les labos des big tech (qui possèdent le compute… et les gros salaires).</li></ul></div></details>
+<details class="article"><summary><span class="article-no">04</span><span class="article-kind">Article</span><span class="article-title">TikTok influence notre déco</span><span class="plus">+</span></summary><div class="article-body"><ul><li><strong>Après les recettes et les livres, TikTok fait vendre des meubles.</strong> Bienvenue sur FurnitureTok, le coin de l’application consacré au mobilier et à la déco…</li><li><strong>Voilà ce qui décolle : (1)</strong> Le <a href="https://trends.google.com/trends/explore?date=today%205-y&amp;q=boneless%20couch" target="_blank" rel="noopener">« boneless couch »</a> (un canapé qui sort d’un carton et reprend sa forme), uniquement constitué de mousse et de tissu, sans ossature en bois. <strong>(2)</strong> La chaise <a href="https://www.tiktok.com/@leelajournals/video/7320326947807169838?q=cross-legged%20desk%20chair&amp;t=1795703622486" target="_blank" rel="noopener">pour travailler en tailleur</a> (dont la tendance générerait encore plus de 610 000 vues par mois). <strong>(3)</strong> des <a href="https://www.tiktok.com/@atashleythomas/video/7690211719402081566?q=human%20dog%20beds%20&amp;t=1795703652730" target="_blank" rel="noopener">paniers pour chiens à taille humaine</a>… ou <strong>(4)</strong> des fauteuils de détente géants…</li><li><strong>C’est malin car chaque meuble promet de résoudre une envie très précise :</strong> Une chaise pour travailler en tailleur, un panier géant pour se lover… Vous visualisez immédiatement ce que vous allez en faire. <strong>Pour une marque, c’est une façon de sortir du rayon des meubles interchangeables.</strong></li></ul></div></details>
+<details class="article"><summary><span class="article-no">05</span><span class="article-kind">Article</span><span class="article-title">L’économie US cartonne</span><span class="plus">+</span></summary><div class="article-body"><ul><li><strong>L’économie <a href="https://www.axios.com/2026/11/24/productivity-entrepreneurship-layoffs-gas-anthropic?utm_source=newsletter&amp;utm_medium=email&amp;utm_campaign=newsletter_axiosam&amp;stream=top&amp;lctg=675031e6c5382fe0660ede40" target="_blank" rel="noopener">a progressé de 4,3%</a></strong> en rythme annualisé au troisième trimestre, contre 3,4 % estimés initialement.</li><li><strong>La productivité augmente</strong> de 2,5% par an, contre 1,5% entre 2005 et 2022.</li><li><strong>L’entrepreneuriat bat des records :</strong> +5M de demandes de création d’entreprise sur les dix premiers mois de l’année. Chez Stripe, le nombre de nouveaux business lancés chaque semaine a environ doublé en un an.</li><li><strong>Pendant ce temps, les licenciements restent proches de leur plancher historique :</strong> En septembre, ils représentaient 1 % de l’emploi, contre un minimum de 0,9% dans cette série remontant à 2001. Le chômage est également resté bas et stable cette année.</li></ul></div></details>
+<details class="article signal"><summary><span class="article-no">06</span><span class="article-kind">Signal</span><span class="article-title">Bernard Arnault prépare sa retraite… pour ses 95 ans</span><span class="plus">+</span></summary><div class="article-body"><p>👴 <strong>Bernard Arnault prépare sa retraite… pour ses 95 ans.</strong> À 77 ans, le milliardaire pourra encore diriger pendant <strong>18 ans</strong> <a href="https://www.strategies.fr/actualites/marques/LQ6976370C/bernard-arnault-pourra-diriger-la-holding-familiale-de-lvmh-jusqu-ses-95-ans.html" target="_blank" rel="noopener">Agache, la holding familiale qui contrôle LVMH</a>. La nouvelle structure fixe à 95 ans l’âge limite de son gérant. Cela concerne la tête du contrôle familial du groupe, pas automatiquement son poste de PDG de LVMH.</p></div></details>
+<details class="article signal"><summary><span class="article-no">07</span><span class="article-kind">Signal</span><span class="article-title">Paris et Berlin veulent protéger le budget européen d’une éventuelle présidence Le Pen</span><span class="plus">+</span></summary><div class="article-body"><p>🇪🇺 <strong>Paris et Berlin veulent protéger le budget européen d’une éventuelle présidence Le Pen.</strong> Selon le <a href="https://www.ft.com/content/3f577839-deed-40f4-af9f-bf8fb54890e3" target="_blank" rel="noopener">Financial Times</a>, la France réclame 35 Md€ supplémentaires pour l’agriculture (+12 %) afin de rendre une remise en cause politiquement coûteuse. L’Allemagne veut inscrire l’aide à l’Ukraine dans le règlement du budget 2028-2034, pour la protéger d’un veto. Deux chefs d’Etat en sursis peuvent-ils imposer leur volonté pour les 8 ans à venir ?</p></div></details>
+</section>
+<section class="pepites" id="pepites">
+<div class="section-label">03 / Liens pépites</div>
+<div><h2>Liens pépites du jour</h2><div class="pepite-list"><p>🎤 Nouveau business <a href="https://youtu.be/UgZyFrGQSzs?si=Tg2oJCxtKZvoths8" target="_blank" rel="noopener">qui décolle</a>.</p>
+<p>🫠 Tiktok a tué <a href="https://www.franceinfo.fr/replay-radio/l-il-de-constance/tiktok-a-tue-nos-hobbies_8275376.html" target="_blank" rel="noopener">nos hobbies</a>.</p>
+<p>😁 Quelle <a href="https://x.com/buildwithkar/status/2125581355757224153?a=I85AJvKOpQzlk2qvWTY&s=20" target="_blank" rel="noopener">horreur</a>.</p>
+<p>📉 L’activité sexuelle <a href="https://x.com/ecurrnomics/status/2125531085102846375?a=ebA5s9pAk-2lkoPiiGA&s=20" target="_blank" rel="noopener">continue de plonger</a> partout.</p>
+<p>😲 Nouveau sondage : Lisnard serait le candidat <a href="https://x.com/clement_mci/status/2125997422405136755?a=DtEhU0olPdtW31-j780&s=20" target="_blank" rel="noopener">le mieux placé</a> face à LePen au 2nd tour.</p></div></div>
+</section>
+<div class="source"><span>Édition source · Luc Allain, The Next Big Sh*t</span><a href="https://www.the-nbs.fr/p/la-testosterone-explose-1-1" target="_blank" rel="noopener">Les faux films cartonnent ↗</a></div>
+</main>
+<footer class="footer"><span>NBS® — Lecture du matin</span><span>Une lecture claire du monde qui change.</span><span>27 / 11 / 2026</span></footer>
+<script>
+const root=document.documentElement;
+const toggle=document.getElementById('themeToggle');
+function applyTheme(theme){root.dataset.theme=theme;const dark=theme==='dark';toggle.textContent=dark?'Mode clair':'Mode sombre';toggle.setAttribute('aria-pressed',String(dark));document.querySelector('meta[name="theme-color"]').content=dark?'#171916':'#e9e6df'}
+applyTheme(root.dataset.theme||'light');
+toggle.addEventListener('click',()=>{const next=root.dataset.theme==='dark'?'light':'dark';applyTheme(next);try{localStorage.setItem('nbs-theme',next)}catch(e){}});
+const progress=document.getElementById('progress');
+function updateProgress(){const max=document.documentElement.scrollHeight-window.innerHeight;progress.style.width=(max>0?window.scrollY/max*100:0)+'%'}
+window.addEventListener('scroll',updateProgress,{passive:true});updateProgress();
+</script>
+</body>
+</html>
+</body>
+</html>
